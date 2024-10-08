@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite" parallel="none">
+	<test name="Smoke Test">
+		<classes>
+			<class name="testCase.LoginTest" />
+			<class name="testCase.SearchTestProduct" />
+			<class name="testCase.VipTest" />
+			<class name="testCase.CartTest" />
+			<class name="testCase.PaymentTest" />
+			<class name="testCase.OrderConfirmationPage" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
