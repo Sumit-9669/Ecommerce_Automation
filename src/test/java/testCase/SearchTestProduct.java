@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class SearchTestProduct extends BaseTest {
 
-	@Test(dependsOnMethods = { "testCase.LoginTest.automateLoginSignup" })
+	@Test(dependsOnMethods = { "testCase.HomepageTest.heroBannerclick" })
 	public void searchProductAfterLogin() throws InterruptedException {
 		// Wait for the search bar to be visible after login
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
