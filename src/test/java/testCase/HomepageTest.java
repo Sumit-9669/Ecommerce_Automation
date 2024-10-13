@@ -1,6 +1,7 @@
 package testCase;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,7 +14,7 @@ public class HomepageTest extends BaseTest {
     private WebDriverWait wait;
 
     @Test(dependsOnMethods = { "testCase.LoginTest.automateLoginSignup" })
-    public void heroBannerclick() throws InterruptedException {
+    public void testClickingHomepageSections() throws InterruptedException {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         // Clicking LHS Banner
@@ -21,30 +22,106 @@ public class HomepageTest extends BaseTest {
 
         // Clicking RHS Banner
         clickBannerAndNavigateBack(loc.getProperty("rhs_banner"), "RHS Banner");
+
+        // Clicking Woodsworth banner Section
+        clickBannerAndNavigateBack(loc.getProperty("woodsworth_banner"), "Woodsworth Banner");
+
+        // Clicking Deals Banner Section
+        clickBannerAndNavigateBack(loc.getProperty("deals_banner"), "Deals Banner");
+
+        // Scroll to Mintwud Banner and click it, then click on the Pepperfry Logo
+        scrollAndClickMintwudAndPepperfryLogo(loc.getProperty("mintwud_banner"), loc.getProperty("pepperfry_logo"), "Mintwud Banner", "Pepperfry Logo");
+
     }
 
     /**
-     * This utility method clicks on a banner and navigates back to the homepage
-     * @param bannerLocator XPath locator for the banner element
-     * @param bannerName Descriptive name for logging purposes
-     * @throws InterruptedException In case the thread sleep is interrupted
+     * This utility method clicks on a banner or section and navigates back to the homepage.
+     * @param bannerLocator XPath locator for the section or banner element.
+     * @param sectionName Descriptive name for logging purposes.
+     * @throws InterruptedException In case the thread sleep is interrupted.
      */
-    private void clickBannerAndNavigateBack(String bannerLocator, String bannerName) throws InterruptedException {
+    private void clickBannerAndNavigateBack(String bannerLocator, String sectionName) throws InterruptedException {
         try {
-            // Wait for the banner to be clickable
-            WebElement banner = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(bannerLocator)));
-            banner.click();
-            System.out.println("Clicked on " + bannerName + " successfully.");
-            
+            // Wait for the section/banner to be present
+            WebElement sectionElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(bannerLocator)));
+
+            // Scroll to the element to make it visible
+            scrollToElement(sectionElement);
+
+            // Wait for a short period to allow any animations/overlays to finish
+            Thread.sleep(1000);
+
+            try {
+                // Attempt to click the element
+                wait.until(ExpectedConditions.elementToBeClickable(sectionElement)).click();
+                System.out.println("Clicked on " + sectionName + " successfully.");
+            } catch (Exception e) {
+                // If click is intercepted, use JavaScript to click as a fallback
+                System.out.println("Normal click failed for " + sectionName + ". Trying JavaScript click.");
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", sectionElement);
+                System.out.println("JavaScript click performed on " + sectionName + ".");
+            }
+
             // Wait for a short period to simulate interaction
             Thread.sleep(3000);
-            
+
             // Navigate back to the homepage
             driver.navigate().back();
             Thread.sleep(3000);  // Wait for the page to reload
 
         } catch (Exception e) {
-            System.err.println("Error while interacting with " + bannerName + ": " + e.getMessage());
+            System.err.println("Error while interacting with " + sectionName + ": " + e.getMessage());
+        }
+    }
+
+    /**
+     * Scroll to Mintwud Banner, click it, and then click on Pepperfry Logo without scrolling back.
+     * @param bannerLocator XPath locator for the Mintwud Banner.
+     * @param logoLocator XPath locator for the Pepperfry Logo.
+     * @param bannerName Descriptive name for the banner (Mintwud) for logging purposes.
+     * @param logoName Descriptive name for the logo (Pepperfry Logo) for logging purposes.
+     * @throws InterruptedException In case the thread sleep is interrupted.
+     */
+    private void scrollAndClickMintwudAndPepperfryLogo(String bannerLocator, String logoLocator, String bannerName, String logoName) throws InterruptedException {
+        try {
+            // Scroll to Mintwud Banner and click it
+            WebElement bannerElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(bannerLocator)));
+            scrollToElement(bannerElement); // Scroll to Mintwud Banner
+
+            // Wait for a short period to ensure proper loading
+            Thread.sleep(2000);
+
+            // Click on Mintwud Banner
+            wait.until(ExpectedConditions.elementToBeClickable(bannerElement)).click();
+            System.out.println("Clicked on " + bannerName + " successfully.");
+            
+            // Wait for a short period to simulate interaction
+            Thread.sleep(3000);
+
+            // Now click the Pepperfry Logo directly (Assume it's in the viewport after Mintwud click)
+            WebElement logoElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(logoLocator)));
+            System.out.println("Pepperfry Logo found. Clicking on it.");
+            // No scrolling needed here, Pepperfry Logo is already in the viewport
+            wait.until(ExpectedConditions.elementToBeClickable(logoElement)).click();
+            System.out.println("Clicked on " + logoName + " successfully.");
+            
+        } catch (Exception e) {
+            System.err.println("Error while interacting with " + bannerName + " or " + logoName + ": " + e.getMessage());
+        }
+    }
+
+    /**
+     * Scrolls the page to bring the specified element into view.
+     * @param element The web element to scroll to.
+     */
+    private void scrollToElement(WebElement element) {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", element);
+            System.out.println("Scrolled to element: " + element.getText());
+        } catch (Exception e) {
+            System.err.println("Error while scrolling to element: " + e.getMessage());
         }
     }
 }
