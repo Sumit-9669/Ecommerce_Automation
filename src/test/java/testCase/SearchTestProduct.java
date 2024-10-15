@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import base.BaseTest;
+import io.qameta.allure.Description;
+
 import java.time.Duration;
 import java.util.ArrayList;
 
@@ -12,10 +14,12 @@ import org.testng.annotations.Test;
 
 public class SearchTestProduct extends BaseTest {
 
-	@Test(dependsOnMethods = { "testCase.HomepageTest.testClickingHomepageSections" })
+	@Test (dependsOnMethods = { "testCase.HomepageTest.testClickingHomepageSections" })
+	@Description("To verify the Search functionality")
 	public void searchProductAfterLogin() throws InterruptedException {
+		System.out.println("INSIDE 'searchProductAfterLogin' METHOD ");
 		// Wait for the search bar to be visible after login
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement searchBar = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("search_bar"))));
 

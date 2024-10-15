@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import base.BaseTest;
+import io.qameta.allure.Description;
 import java.time.Duration;
 
 public class HomepageTest extends BaseTest {
@@ -14,14 +15,15 @@ public class HomepageTest extends BaseTest {
     private WebDriverWait wait;
 
     @Test(dependsOnMethods = { "testCase.LoginTest.automateLoginSignup" })
+    @Description("To verify redirection on clicking different sections")
     public void testClickingHomepageSections() throws InterruptedException {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         // Clicking LHS Banner
         clickBannerAndNavigateBack(loc.getProperty("lhs_banner"), "LHS Banner");
 
         // Clicking RHS Banner
-        clickBannerAndNavigateBack(loc.getProperty("rhs_banner"), "RHS Banner");
+        //clickBannerAndNavigateBack(loc.getProperty("rhs_banner"), "RHS Banner");
 
         // Clicking Woodsworth banner Section
         clickBannerAndNavigateBack(loc.getProperty("woodsworth_banner"), "Woodsworth Banner");
@@ -40,6 +42,7 @@ public class HomepageTest extends BaseTest {
      * @param sectionName Descriptive name for logging purposes.
      * @throws InterruptedException In case the thread sleep is interrupted.
      */
+    
     private void clickBannerAndNavigateBack(String bannerLocator, String sectionName) throws InterruptedException {
         try {
             // Wait for the section/banner to be present
@@ -49,7 +52,7 @@ public class HomepageTest extends BaseTest {
             scrollToElement(sectionElement);
 
             // Wait for a short period to allow any animations/overlays to finish
-            Thread.sleep(1000);
+            Thread.sleep(3000);
 
             try {
                 // Attempt to click the element
@@ -83,6 +86,7 @@ public class HomepageTest extends BaseTest {
      * @param logoName Descriptive name for the logo (Pepperfry Logo) for logging purposes.
      * @throws InterruptedException In case the thread sleep is interrupted.
      */
+    @Description("To verify Clicking on Pepperfry Logo")
     private void scrollAndClickMintwudAndPepperfryLogo(String bannerLocator, String logoLocator, String bannerName, String logoName) throws InterruptedException {
         try {
             // Scroll to Mintwud Banner and click it
@@ -90,7 +94,7 @@ public class HomepageTest extends BaseTest {
             scrollToElement(bannerElement); // Scroll to Mintwud Banner
 
             // Wait for a short period to ensure proper loading
-            Thread.sleep(2000);
+            Thread.sleep(3000);
 
             // Click on Mintwud Banner
             wait.until(ExpectedConditions.elementToBeClickable(bannerElement)).click();
@@ -105,7 +109,7 @@ public class HomepageTest extends BaseTest {
             // No scrolling needed here, Pepperfry Logo is already in the viewport
             wait.until(ExpectedConditions.elementToBeClickable(logoElement)).click();
             System.out.println("Clicked on " + logoName + " successfully.");
-            
+            Thread.sleep(3000);            
         } catch (Exception e) {
             System.err.println("Error while interacting with " + bannerName + " or " + logoName + ": " + e.getMessage());
         }

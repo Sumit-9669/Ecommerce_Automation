@@ -9,10 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import io.qameta.allure.Description;
 
 public class CartTest extends BaseTest {
 
 	@Test
+	@Description("To verify the Qty in Cart & the functionality of clicking on 'Proceed To Pay' CTA")
 	public void qtyDropDown() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
 		WebElement quantityDropdown = wait

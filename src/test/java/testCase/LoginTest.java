@@ -9,11 +9,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import io.qameta.allure.Description;
 import utilities.EmailOTPReader;
 
 public class LoginTest extends BaseTest {
 
 	@Test
+	@Description("To verify the Login functionality using Email")
 	public void automateLoginSignup() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 

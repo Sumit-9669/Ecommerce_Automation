@@ -8,10 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import io.qameta.allure.Description;
 
 public class OrderConfirmationPage extends BaseTest {
 
 	@Test
+	@Description("To verify the To Verify the 'Order Confirmation Message' & 'Order ID' ")
 	public void verifyOrderPlacement() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
 
