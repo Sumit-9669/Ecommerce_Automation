@@ -7,12 +7,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import base.BaseTest; // Import BaseTest class to access driver
+import io.qameta.allure.Description;
+
 import java.time.Duration;
 
 public class VipTest extends BaseTest {
 
 	// Method to click on 'Add to Cart' and then 'Go to Cart'
 	@Test
+	@Description("To verify the 'Add to Cart' & 'Go To Cart' functionality")
 	public void addToCartAndGoToCart() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
 		// Wait for 'Add to Cart' button and click on it

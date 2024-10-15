@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-15T22:06:19 IST" name="Smoke Suite" finished-at="2024-10-15T22:07:31 IST" duration-ms="72009">
+    <groups>
+    </groups>
+    <test started-at="2024-10-15T22:06:19 IST" name="Smoke Test" finished-at="2024-10-15T22:07:31 IST" duration-ms="72009">
+      <class name="testCase.CartTest">
+        <test-method signature="qtyDropDown()[pri:0, instance:testCase.CartTest@28261e8e]" started-at="2024-10-15T22:07:17 IST" name="qtyDropDown" finished-at="2024-10-15T22:07:18 IST" duration-ms="714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtyDropDown -->
+      </class> <!-- testCase.CartTest -->
+      <class name="testCase.SearchTestProduct">
+        <test-method signature="searchProductAfterLogin()[pri:0, instance:testCase.SearchTestProduct@4b29d1d2]" started-at="2024-10-15T22:07:09 IST" name="searchProductAfterLogin" finished-at="2024-10-15T22:07:10 IST" depends-on-methods="testCase.HomepageTest.testClickingHomepageSections" duration-ms="1433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAfterLogin -->
+      </class> <!-- testCase.SearchTestProduct -->
+      <class name="testCase.OrderConfirmationPage">
+        <test-method signature="verifyOrderPlacement()[pri:0, instance:testCase.OrderConfirmationPage@8519cb4]" started-at="2024-10-15T22:07:31 IST" name="verifyOrderPlacement" finished-at="2024-10-15T22:07:31 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderPlacement -->
+      </class> <!-- testCase.OrderConfirmationPage -->
+      <class name="testCase.VipTest">
+        <test-method signature="addToCartAndGoToCart()[pri:0, instance:testCase.VipTest@7f485fda]" started-at="2024-10-15T22:07:10 IST" name="addToCartAndGoToCart" finished-at="2024-10-15T22:07:17 IST" duration-ms="6711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartAndGoToCart -->
+      </class> <!-- testCase.VipTest -->
+      <class name="testCase.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.LoginTest@17f9d882]" started-at="2024-10-15T22:06:08 IST" name="setUp" finished-at="2024-10-15T22:06:19 IST" duration-ms="10959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="automateLoginSignup()[pri:0, instance:testCase.LoginTest@17f9d882]" started-at="2024-10-15T22:06:19 IST" name="automateLoginSignup" finished-at="2024-10-15T22:06:32 IST" duration-ms="12134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- automateLoginSignup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.LoginTest@17f9d882]" started-at="2024-10-15T22:07:31 IST" name="tearDown" finished-at="2024-10-15T22:07:32 IST" duration-ms="359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCase.LoginTest -->
+      <class name="testCase.PaymentTest">
+        <test-method signature="paymentOptions()[pri:0, instance:testCase.PaymentTest@d737b89]" started-at="2024-10-15T22:07:18 IST" name="paymentOptions" finished-at="2024-10-15T22:07:31 IST" duration-ms="13592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paymentOptions -->
+      </class> <!-- testCase.PaymentTest -->
+      <class name="testCase.HomepageTest">
+        <test-method signature="testClickingHomepageSections()[pri:0, instance:testCase.HomepageTest@1349883]" started-at="2024-10-15T22:06:32 IST" name="testClickingHomepageSections" finished-at="2024-10-15T22:07:09 IST" depends-on-methods="testCase.LoginTest.automateLoginSignup" duration-ms="37052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClickingHomepageSections -->
+      </class> <!-- testCase.HomepageTest -->
+    </test> <!-- Smoke Test -->
+  </suite> <!-- Smoke Suite -->
+</testng-results>
