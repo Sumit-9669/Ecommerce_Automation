@@ -103,7 +103,7 @@ public class HomepageTest extends BaseTest {
             // Wait for a short period to simulate interaction
             Thread.sleep(3000);
 
-            // Now click the Pepperfry Logo directly (Assume it's in the viewport after Mintwud click)
+            // Now click the Pepperfry Logo directly 
             WebElement logoElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(logoLocator)));
             System.out.println("Pepperfry Logo found. Clicking on it.");
             // No scrolling needed here, Pepperfry Logo is already in the viewport
