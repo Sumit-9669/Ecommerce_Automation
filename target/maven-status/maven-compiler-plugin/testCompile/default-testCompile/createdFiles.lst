@@ -1,5 +1,6 @@
 testCase\LoginTest.class
 testCase\HomepageTest.class
+testCase\SearchTestProduct$1.class
 testCase\PaymentTest.class
 testCase\VipTest.class
 testCase\OrderConfirmationPage.class
