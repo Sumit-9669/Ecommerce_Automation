@@ -1,57 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-16T21:29:48 IST" name="Smoke Suite" finished-at="2024-10-16T21:31:27 IST" duration-ms="98724">
+  <suite started-at="2024-10-23T10:53:18 IST" name="Smoke Suite" finished-at="2024-10-23T10:55:02 IST" duration-ms="104491">
     <groups>
     </groups>
-    <test started-at="2024-10-16T21:29:48 IST" name="Smoke Test" finished-at="2024-10-16T21:31:27 IST" duration-ms="98724">
+    <test started-at="2024-10-23T10:53:18 IST" name="Smoke Test" finished-at="2024-10-23T10:55:02 IST" duration-ms="104491">
       <class name="testCase.CartTest">
-        <test-method signature="qtyDropDown()[pri:0, instance:testCase.CartTest@5afa3c9]" started-at="2024-10-16T21:31:12 IST" name="qtyDropDown" finished-at="2024-10-16T21:31:13 IST" duration-ms="832" status="PASS">
+        <test-method signature="qtyDropDown()[pri:0, instance:testCase.CartTest@5524cca1]" started-at="2024-10-23T10:54:48 IST" name="qtyDropDown" finished-at="2024-10-23T10:54:49 IST" duration-ms="781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtyDropDown -->
       </class> <!-- testCase.CartTest -->
       <class name="testCase.SearchTestProduct">
-        <test-method signature="searchProductAfterLogin()[pri:0, instance:testCase.SearchTestProduct@5f049ea1]" started-at="2024-10-16T21:30:49 IST" name="searchProductAfterLogin" finished-at="2024-10-16T21:31:05 IST" depends-on-methods="testCase.HomepageTest.testClickingHomepageSections" duration-ms="16264" status="PASS">
+        <test-method signature="searchProductAfterLogin()[pri:0, instance:testCase.SearchTestProduct@33bc72d1]" started-at="2024-10-23T10:54:28 IST" name="searchProductAfterLogin" finished-at="2024-10-23T10:54:41 IST" depends-on-methods="testCase.HomepageTest.testClickingHomepageSections" duration-ms="13157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAfterLogin -->
       </class> <!-- testCase.SearchTestProduct -->
       <class name="testCase.OrderConfirmationPage">
-        <test-method signature="verifyOrderPlacement()[pri:0, instance:testCase.OrderConfirmationPage@909217e]" started-at="2024-10-16T21:31:27 IST" name="verifyOrderPlacement" finished-at="2024-10-16T21:31:27 IST" duration-ms="125" status="PASS">
+        <test-method signature="verifyOrderPlacement()[pri:0, instance:testCase.OrderConfirmationPage@48bb62]" started-at="2024-10-23T10:55:02 IST" name="verifyOrderPlacement" finished-at="2024-10-23T10:55:02 IST" duration-ms="147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOrderPlacement -->
       </class> <!-- testCase.OrderConfirmationPage -->
       <class name="testCase.VipTest">
-        <test-method signature="addToCartAndGoToCart()[pri:0, instance:testCase.VipTest@72cc7e6f]" started-at="2024-10-16T21:31:05 IST" name="addToCartAndGoToCart" finished-at="2024-10-16T21:31:12 IST" duration-ms="6773" status="PASS">
+        <test-method signature="addToCartAndGoToCart()[pri:0, instance:testCase.VipTest@1a75e76a]" started-at="2024-10-23T10:54:41 IST" name="addToCartAndGoToCart" finished-at="2024-10-23T10:54:48 IST" duration-ms="6557" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartAndGoToCart -->
       </class> <!-- testCase.VipTest -->
       <class name="testCase.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.LoginTest@28261e8e]" started-at="2024-10-16T21:29:41 IST" name="setUp" finished-at="2024-10-16T21:29:48 IST" duration-ms="6921" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.LoginTest@cc43f62]" started-at="2024-10-23T10:53:10 IST" name="setUp" finished-at="2024-10-23T10:53:18 IST" duration-ms="8003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="automateLoginSignup()[pri:0, instance:testCase.LoginTest@28261e8e]" started-at="2024-10-16T21:29:48 IST" name="automateLoginSignup" finished-at="2024-10-16T21:30:05 IST" duration-ms="16671" status="PASS">
+        <test-method signature="InvalidLoginSignup()[pri:1, instance:testCase.LoginTest@cc43f62]" started-at="2024-10-23T10:53:18 IST" name="InvalidLoginSignup" finished-at="2024-10-23T10:53:37 IST" duration-ms="18826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidLoginSignup -->
+        <test-method signature="automateLoginSignup()[pri:2, instance:testCase.LoginTest@cc43f62]" started-at="2024-10-23T10:53:37 IST" name="automateLoginSignup" finished-at="2024-10-23T10:53:51 IST" duration-ms="14376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- automateLoginSignup -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.LoginTest@28261e8e]" started-at="2024-10-16T21:31:27 IST" name="tearDown" finished-at="2024-10-16T21:31:27 IST" duration-ms="576" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.LoginTest@cc43f62]" started-at="2024-10-23T10:55:02 IST" name="tearDown" finished-at="2024-10-23T10:55:05 IST" duration-ms="2665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCase.LoginTest -->
       <class name="testCase.PaymentTest">
-        <test-method signature="paymentOptions()[pri:0, instance:testCase.PaymentTest@72035809]" started-at="2024-10-16T21:31:13 IST" name="paymentOptions" finished-at="2024-10-16T21:31:27 IST" duration-ms="13987" status="PASS">
+        <test-method signature="paymentOptions()[pri:0, instance:testCase.PaymentTest@5032714f]" started-at="2024-10-23T10:54:49 IST" name="paymentOptions" finished-at="2024-10-23T10:55:02 IST" duration-ms="13457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paymentOptions -->
       </class> <!-- testCase.PaymentTest -->
       <class name="testCase.HomepageTest">
-        <test-method signature="testClickingHomepageSections()[pri:0, instance:testCase.HomepageTest@3f191845]" started-at="2024-10-16T21:30:05 IST" name="testClickingHomepageSections" finished-at="2024-10-16T21:30:49 IST" depends-on-methods="testCase.LoginTest.automateLoginSignup" duration-ms="43849" status="PASS">
+        <test-method signature="testClickingHomepageSections()[pri:0, instance:testCase.HomepageTest@273444fe]" started-at="2024-10-23T10:53:51 IST" name="testClickingHomepageSections" finished-at="2024-10-23T10:54:28 IST" depends-on-methods="testCase.LoginTest.automateLoginSignup" duration-ms="37027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickingHomepageSections -->
