@@ -13,27 +13,13 @@
           <include name="verifyOrderPlacement"/>
         </methods>
       </class> <!-- testCase.OrderConfirmationPage -->
-      <class name="testCase.HomepageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testClickingHomepageSections"/>
-        </methods>
-      </class> <!-- testCase.HomepageTest -->
       <class name="testCase.LoginTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="automateLoginSignup"/>
+          <include name="InvalidLoginSignup"/>
         </methods>
       </class> <!-- testCase.LoginTest -->
-      <class name="testCase.SearchTestProduct">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="searchProductAfterLogin"/>
-        </methods>
-      </class> <!-- testCase.SearchTestProduct -->
       <class name="testCase.CartTest">
         <methods>
           <include name="setUp"/>
