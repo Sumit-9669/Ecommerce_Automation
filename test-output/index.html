@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 5 failed,   2 passed</span>
+                    <span class="method-stats">8 methods, 5 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Smoke_Suite" class="show-methods failed suite-Smoke_Suite"> (show)</a> <!-- show-methods failed suite-Smoke_Suite -->
                     </span>
                     <div class="method-list-content failed suite-Smoke_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.LoginTest" class="method navigator-link" hash-for-method="InvalidLoginSignup">InvalidLoginSignup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Smoke_Suite" title="testCase.VipTest" class="method navigator-link" hash-for-method="addToCartAndGoToCart">addToCartAndGoToCart</a> <!-- method navigator-link -->
@@ -114,11 +119,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="qtyDropDown">qtyDropDown</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.SearchTestProduct" class="method navigator-link" hash-for-method="searchProductAfterLogin">searchProductAfterLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,6 +138,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Smoke_Suite" title="testCase.LoginTest" class="method navigator-link" hash-for-method="automateLoginSignup">automateLoginSignup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.SearchTestProduct" class="method navigator-link" hash-for-method="searchProductAfterLogin">searchProductAfterLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -179,9 +184,9 @@ from unknown error: web view not found
 Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [89789665e48c75c0fd9e448700b988b5, findElement {value=//p[@class=&apos;oc-status-ttl font-bold text-lg&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50648/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 89789665e48c75c0fd9e448700b988b5
+Command: [1952d6e344794563ad463c329ddfd255, findElement {value=//p[@class=&apos;oc-status-ttl font-bold text-lg&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58497}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58497/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1952d6e344794563ad463c329ddfd255
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -206,23 +211,23 @@ Session ID: 89789665e48c75c0fd9e448700b988b5
           <div class="suite-Smoke_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testCase.CartTest</span>
+              <span class="class-name">testCase.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="qtyDropDown">
-                  </a> <!-- qtyDropDown -->
-                  <span class="method-name">qtyDropDown</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //li[@data-label=&apos;1&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+                  <a name="InvalidLoginSignup">
+                  </a> <!-- InvalidLoginSignup -->
+                  <span class="method-name">InvalidLoginSignup</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[normalize-space()=&apos;LOGIN/SIGNUP&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50648/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 89789665e48c75c0fd9e448700b988b5
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58497}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58497/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1952d6e344794563ad463c329ddfd255
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at testCase.CartTest.qtyDropDown(CartTest.java:25)
+	at testCase.LoginTest.InvalidLoginSignup(LoginTest.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -233,25 +238,46 @@ Session ID: 89789665e48c75c0fd9e448700b988b5
           <div class="suite-Smoke_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testCase.SearchTestProduct</span>
+              <span class="class-name">testCase.CartTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchProductAfterLogin">
-                  </a> <!-- searchProductAfterLogin -->
-                  <span class="method-name">searchProductAfterLogin</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //img[@title=&apos;7Unique7 Automation Test SKU - Do NOT ship the order&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+                  <a name="qtyDropDown">
+                  </a> <!-- qtyDropDown -->
+                  <span class="method-name">qtyDropDown</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@type=&apos;button&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testCase.CartTest.qtyDropDown(CartTest.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
 Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50648/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 89789665e48c75c0fd9e448700b988b5
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at testCase.SearchTestProduct.searchProductAfterLogin(SearchTestProduct.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+Command: [1952d6e344794563ad463c329ddfd255, findElement {value=//button[@type=&apos;button&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58497}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58497/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1952d6e344794563ad463c329ddfd255
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 29 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -269,16 +295,37 @@ Session ID: 89789665e48c75c0fd9e448700b988b5
                   </a> <!-- paymentOptions -->
                   <span class="method-name">paymentOptions</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[contains(text(),&apos;Pepperfry Gift Card&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50648/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 89789665e48c75c0fd9e448700b988b5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at testCase.PaymentTest.paymentOptions(PaymentTest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1952d6e344794563ad463c329ddfd255, findElement {value=//span[contains(text(),&apos;Pepperfry Gift Card&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58497}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58497/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1952d6e344794563ad463c329ddfd255
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 29 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -296,16 +343,37 @@ Session ID: 89789665e48c75c0fd9e448700b988b5
                   </a> <!-- addToCartAndGoToCart -->
                   <span class="method-name">addToCartAndGoToCart</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;vip-cta marginBottom-16 ng-star-inserted vip-cta-web-pinned&apos;]//div[@class=&apos;pf-col xs-6 vip-cta-cart-btn ng-star-inserted&apos;]//button[@id=&apos;Button&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50648/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 89789665e48c75c0fd9e448700b988b5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at testCase.VipTest.addToCartAndGoToCart(VipTest.java:22)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1952d6e344794563ad463c329ddfd255, findElement {value=//div[@class=&apos;vip-cta marginBottom-16 ng-star-inserted vip-cta-web-pinned&apos;]//div[@class=&apos;pf-col xs-6 vip-cta-cart-btn ng-star-inserted&apos;]//button[@id=&apos;Button&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58497}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58497/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1952d6e344794563ad463c329ddfd255
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 29 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -337,6 +405,21 @@ Session ID: 89789665e48c75c0fd9e448700b988b5
                   <a name="automateLoginSignup">
                   </a> <!-- automateLoginSignup -->
                   <span class="method-name">automateLoginSignup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Suite-class-passed -->
+          <div class="suite-Smoke_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCase.SearchTestProduct</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchProductAfterLogin">
+                  </a> <!-- searchProductAfterLogin -->
+                  <span class="method-name">searchProductAfterLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -402,40 +485,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testClickingHomepageSections')
-data.setCell(0, 2, 'testCase.HomepageTest')
-data.setCell(0, 3, 44215);
+data.setCell(0, 1, 'searchProductAfterLogin')
+data.setCell(0, 2, 'testCase.SearchTestProduct')
+data.setCell(0, 3, 166898);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'automateLoginSignup')
-data.setCell(1, 2, 'testCase.LoginTest')
-data.setCell(1, 3, 12785);
+data.setCell(1, 1, 'testClickingHomepageSections')
+data.setCell(1, 2, 'testCase.HomepageTest')
+data.setCell(1, 3, 80156);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'searchProductAfterLogin')
-data.setCell(2, 2, 'testCase.SearchTestProduct')
-data.setCell(2, 3, 11378);
+data.setCell(2, 1, 'automateLoginSignup')
+data.setCell(2, 2, 'testCase.LoginTest')
+data.setCell(2, 3, 20785);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyOrderPlacement')
-data.setCell(3, 2, 'testCase.OrderConfirmationPage')
-data.setCell(3, 3, 10492);
+data.setCell(3, 1, 'InvalidLoginSignup')
+data.setCell(3, 2, 'testCase.LoginTest')
+data.setCell(3, 3, 11197);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'qtyDropDown')
-data.setCell(4, 2, 'testCase.CartTest')
-data.setCell(4, 3, 10369);
+data.setCell(4, 1, 'paymentOptions')
+data.setCell(4, 2, 'testCase.PaymentTest')
+data.setCell(4, 3, 10334);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'addToCartAndGoToCart')
 data.setCell(5, 2, 'testCase.VipTest')
-data.setCell(5, 3, 10214);
+data.setCell(5, 3, 10301);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'paymentOptions')
-data.setCell(6, 2, 'testCase.PaymentTest')
-data.setCell(6, 3, 10211);
+data.setCell(6, 1, 'verifyOrderPlacement')
+data.setCell(6, 2, 'testCase.OrderConfirmationPage')
+data.setCell(6, 3, 10299);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'qtyDropDown')
+data.setCell(7, 2, 'testCase.CartTest')
+data.setCell(7, 3, 10290);
 window.suiteTableData['Smoke_Suite']= { tableData: data, tableDiv: 'times-div-Smoke_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Smoke_Suite">
               </div> <!-- times-div-Smoke_Suite -->
             </div> <!-- times-div -->
@@ -454,16 +541,25 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testCase.HomepageTest</span>
+              <span class="ignored-class-name">testCase.OrderConfirmationPage</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
                 <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testCase.OrderConfirmationPage</span>
+              <span class="ignored-class-name">testCase.HomepageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCase.CartTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setUp</span>
                 <br/>
@@ -477,15 +573,6 @@ return data;
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
                 <span class="ignored-method-name">setUp</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testCase.CartTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -521,24 +608,28 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">InvalidLoginSignup</span>
+                <span class="method-start">10457 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">automateLoginSignup</span>
-                <span class="method-start">11286 ms</span>
+                <span class="method-start">21981 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCase.HomepageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testClickingHomepageSections</span>
-                <span class="method-start">24242 ms</span>
+                <span class="method-start">42787 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCase.SearchTestProduct</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">searchProductAfterLogin</span>
-                <span class="method-start">68473 ms</span>
+                <span class="method-start">122950 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -547,7 +638,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addToCartAndGoToCart</span>
-                <span class="method-start">79868 ms</span>
+                <span class="method-start">289869 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -556,7 +647,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">qtyDropDown</span>
-                <span class="method-start">90112 ms</span>
+                <span class="method-start">300192 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -565,7 +656,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">paymentOptions</span>
-                <span class="method-start">100492 ms</span>
+                <span class="method-start">310489 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -574,14 +665,14 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyOrderPlacement</span>
-                <span class="method-start">110716 ms</span>
+                <span class="method-start">320852 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCase.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">121314 ms</span>
+                <span class="method-start">331289 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
