@@ -3,6 +3,7 @@ package testCase;
 import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,13 +30,8 @@ public class Normal_Clip extends BaseTest {
 			WebElement submenuItem = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty(submenu))));
 			submenuItem.click();
+			Thread.sleep(2000);
 
-			// Verify the page title after each click
-			String pageTitle = driver.getTitle();
-			System.out.println("Page Title for " + submenu + " is " + pageTitle);
-
-			// Optionally wait before moving on to the next submenu item
-			Thread.sleep(2000); // Adjust as needed for page load
 		}
 	}
 
@@ -52,8 +48,7 @@ public class Normal_Clip extends BaseTest {
 	@Test
 	public void testHomeDecorMenu() throws InterruptedException {
 		// List of submenu locators under Home Decor
-		List<String> homeDecorSubmenus = List.of("religious_idols", "vaccum_cleaners", "wall_clocks",
-				"desk_pots");
+		List<String> homeDecorSubmenus = List.of("religious_idols", "vaccum_cleaners", "wall_clocks", "desk_pots");
 		// Call the method for Home Decor meta menu
 		hoverAndClickSubMenus("Home_Decor_Meta", homeDecorSubmenus);
 		System.out.println("Home Decor Meta Verified");
@@ -69,5 +64,141 @@ public class Normal_Clip extends BaseTest {
 		System.out.println("Mattresses Meta Verified");
 		Thread.sleep(2000);
 	}
+	
+	@Test 
+	public void verifyFurnitureFilters() throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Actions actions = new Actions(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		WebElement threeseatersofa = wait.until(ExpectedConditions
+                .elementToBeClickable(By.xpath(loc.getProperty("Furniture_Meta"))));        
+        actions.moveToElement(threeseatersofa).perform();
+        
+        WebElement drawerOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("3_seater_sofa"))));
+        drawerOption.click();
+        
+        WebElement moreFilters = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("more_filters"))));
+        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", moreFilters);
+		js.executeScript("arguments[0].click();", moreFilters);
+        Thread.sleep(1000);
+        
+        WebElement filterPanel = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("brand_filter"))));
+        filterPanel.click();  // Click to expand the accordion
+        System.out.println("Clicked on the first accordion item.");
+
+        // Wait for the checkbox to appear in the expanded accordion
+        WebElement brandCheckbox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("casacraft_brand"))));
+        brandCheckbox.click();
+        System.out.println("Clicked on casacraft brand");
+		Thread.sleep(1000);
+		
+		WebElement applyFilterButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("apply_filter"))));
+		applyFilterButton.click();
+		System.out.println("Clicked on apply filter button");
+		Thread.sleep(1000);
+		
+		moreFilters = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("more_filters"))));
+		js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", moreFilters);
+		js.executeScript("arguments[0].click();", moreFilters);
+		Thread.sleep(1000);
+
+		WebElement clearAllButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("clear_all"))));
+		clearAllButton.click();
+		System.out.println("Clicked on 'Clear All' to remove the applied filters");
+		Thread.sleep(1000);
+		
+	}
+	
+	@Test 
+	public void verifyHomeDecorFilters() throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Actions actions = new Actions(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		WebElement religiousIdols = wait.until(ExpectedConditions
+                .elementToBeClickable(By.xpath(loc.getProperty("Home_Decor_Meta"))));        
+        actions.moveToElement(religiousIdols).perform();
+        
+        WebElement drawerOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("religious_idols"))));
+        drawerOption.click();
+        
+        WebElement moreFilters = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("more_filters"))));
+        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", moreFilters);
+		js.executeScript("arguments[0].click();", moreFilters);
+        Thread.sleep(1000);
+        
+        WebElement filterPanel = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("colour_filter"))));
+        filterPanel.click();  // Click to expand the accordion
+        
+        // Wait for the checkbox to appear in the expanded accordion
+        WebElement colourCheckbox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("gold_colour"))));
+        colourCheckbox.click();
+        System.out.println("Clicked on gold colour");
+		Thread.sleep(1000);
+		
+		WebElement applyFilterButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("apply_filter"))));
+		applyFilterButton.click();
+		System.out.println("Clicked on apply filter button");
+		Thread.sleep(1000);
+		
+		moreFilters = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("more_filters"))));
+		js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", moreFilters);
+		js.executeScript("arguments[0].click();", moreFilters);
+		Thread.sleep(1000);
+
+		WebElement clearAllButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("clear_all"))));
+		clearAllButton.click();
+		System.out.println("Clicked on 'Clear All' to remove the applied filters");
+		Thread.sleep(1000);
+		
+	}
+	
+	@Test 
+	public void verifyMattressesFilters() throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Actions actions = new Actions(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		WebElement springSingleMattresses = wait.until(ExpectedConditions
+	            .elementToBeClickable(By.xpath(loc.getProperty("Mattresses_Meta"))));        
+		actions.moveToElement(springSingleMattresses).perform();
+		
+		WebElement drawerOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("spring_single_mattresses"))));
+		drawerOption.click();
+		
+		WebElement moreFilters = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("more_filters"))));
+		js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", moreFilters);
+		js.executeScript("arguments[0].click();", moreFilters);
+		Thread.sleep(1000);
+		
+		WebElement filterPanel = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("size_filter"))));
+		filterPanel.click();  // Click to expand the accordion
+		
+		// Wait for the checkbox to appear in the expanded accordion
+		WebElement colourCheckbox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("72X36Inch"))));
+		colourCheckbox.click();
+		System.out.println("Clicked on 72 X 36 Inch Size");
+		Thread.sleep(1000);
+		
+		WebElement applyFilterButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("apply_filter"))));
+		applyFilterButton.click();
+		System.out.println("Clicked on apply filter button");
+		Thread.sleep(1000);
+		
+		moreFilters = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("more_filters"))));
+		js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", moreFilters);
+		js.executeScript("arguments[0].click();", moreFilters);
+		Thread.sleep(1000);
+
+		WebElement clearAllButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("clear_all"))));
+		clearAllButton.click();
+		System.out.println("Clicked on 'Clear All' to remove the applied filters");
+		Thread.sleep(1000);
+	}
+
 
 }

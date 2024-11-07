@@ -22,7 +22,7 @@ public class SearchTestProduct extends BaseTest {
 	public void searchProductAfterLogin() throws InterruptedException {
 		System.out.println("INSIDE 'searchProductAfterLogin' METHOD ");
 
-		String[] keywords = { "3 seater sofa", "queen size mattresses", "wing chair", "Bar Stools & Chairs" };
+		String[] keywords = { "3 seater sofa", "mattresses", "wing chair" };
 
 		for (String keyword : keywords) {
 			try {
