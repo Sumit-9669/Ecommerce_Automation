@@ -25,7 +25,7 @@ public class VipFlow extends BaseTest {
 
 		WebElement goToCart = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("go_to_cart"))));
 		goToCart.click();
-		System.out.println("Product Added to Cart Successfully");
+		System.out.println("Product Added to the Cart Successfully");
 		Thread.sleep(100);
 	}
 }

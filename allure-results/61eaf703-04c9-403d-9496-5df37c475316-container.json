@@ -1,0 +1,1 @@
+{"uuid":"61eaf703-04c9-403d-9496-5df37c475316","name":"testCase.VipTest.setUp","children":["6eb468ba-3c76-4f26-bb3d-68f987edcb56"],"description":"","befores":[{"name":"setUp","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1731043904684,"stop":1731043904684}],"afters":[],"start":1731043904684,"stop":1731043904684}

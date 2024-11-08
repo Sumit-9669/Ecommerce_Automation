@@ -95,7 +95,7 @@ public class VipTest extends BaseTest {
 		Thread.sleep(10000);
 		driver.navigate().back();
 		Thread.sleep(1000);
-		System.out.println("Navigated back to the VIP page from Cart page");
+		System.out.println("Navigated back to VIP page from Cart page");
 
 	}
 }
