@@ -199,6 +199,15 @@ public class Normal_Clip extends BaseTest {
 		System.out.println("Clicked on 'Clear All' to remove the applied filters");
 		Thread.sleep(1000);
 	}
-
-
+	
+	/*@Test
+	public void goToHome() throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement pepperfryLogo = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("pepperfry_logo"))));
+		pepperfryLogo.click();
+		System.out.println("Navigated back to the Homepage Successfully");
+	}*/
+	
 }

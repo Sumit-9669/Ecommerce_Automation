@@ -9,8 +9,9 @@
 			<class name="testCase.LoginTest" />
 			<class name="testCase.HomepageTest" />
 			<class name="testCase.Normal_Clip" />
-			<class name="testCase.SearchTestProduct" />
 			<class name="testCase.VipTest" />
+			<class name="testCase.SearchTestProduct" />
+			<class name="testCase.VipFlow" />
 			<class name="testCase.CartTest" />
 			<class name="testCase.PaymentTest" />
 			<class name="testCase.OrderConfirmationPage" />
