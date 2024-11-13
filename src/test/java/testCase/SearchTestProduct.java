@@ -18,11 +18,11 @@ import org.testng.annotations.Test;
 public class SearchTestProduct extends BaseTest {
 
 	@Test(dependsOnMethods = { "testCase.HomepageTest.testClickingHomepageSections" })
-	@Description("To verify the Search functionality with different search queries followed by a Test SKU search")
+	@Description("To verify the Search functionality with different search queries")
 	public void searchProductAfterLogin() throws InterruptedException {
 		System.out.println("INSIDE 'searchProductAfterLogin' METHOD ");
 
-		String[] keywords = { "3 seater sofa", "mattresses", "wing chair" };
+		String[] keywords = { "3 seater sofa", "idols"};
 
 		for (String keyword : keywords) {
 			try {

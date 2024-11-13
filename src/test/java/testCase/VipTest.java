@@ -72,9 +72,9 @@ public class VipTest extends BaseTest {
 		changePincode.click();
 		System.out.println("Clicked on Pincode Change button successfully");
 		Thread.sleep(1000);
-		pincodeField.sendKeys("400078");
+		pincodeField.sendKeys("560001");
 		Thread.sleep(1000);
-		System.out.println("Successfully entered the new pincode i.e. 400078");
+		System.out.println("Successfully entered the new pincode i.e. 560001");
 		
 		WebElement deliveryText = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("delivery_text"))));
@@ -92,10 +92,21 @@ public class VipTest extends BaseTest {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("buy_now"))));
 		buyNow.click();
 		System.out.println("Clicked on Buy Now CTA Successfully");
-		Thread.sleep(10000);
-		driver.navigate().back();
+		Thread.sleep(2000);
+		/*driver.navigate().back();
 		Thread.sleep(1000);
 		System.out.println("Navigated back to VIP page from Cart page");
-
+		
+		// Switch to the first tab and close all other tabs
+	    driver.switchTo().window(tabs.get(0));  // Switch to the first tab
+	    for (int i = 1; i < tabs.size(); i++) {  // Close all other tabs
+	        driver.switchTo().window(tabs.get(i));
+	        driver.close();
+	    }
+	    driver.switchTo().window(tabs.get(0));*/
+	    
+	    Thread.sleep(3000);
+		
 	}
+	
 }
