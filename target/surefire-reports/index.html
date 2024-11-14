@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Smoke_Suite" class="navigator-link">
+              <span class="suite-name border-passed">Smoke Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Smoke_Suite" class="navigator-link ">
+                    <span>D:\QA Automation\AutomationFramework\TestRunner\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Smoke_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Smoke_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Smoke_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Smoke_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Smoke_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Smoke_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">21 methods,   21 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Smoke_Suite" class="hide-methods passed suite-Smoke_Suite"> (hide)</a> <!-- hide-methods passed suite-Smoke_Suite -->
+                      <a href="#" panel-name="suite-Smoke_Suite" class="show-methods passed suite-Smoke_Suite"> (show)</a> <!-- show-methods passed suite-Smoke_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Smoke_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.LoginTest" class="method navigator-link" hash-for-method="InvalidLoginSignup">InvalidLoginSignup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="againClickOnWishlistCTA">againClickOnWishlistCTA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="againSwitchFocusToPopup">againSwitchFocusToPopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.LoginTest" class="method navigator-link" hash-for-method="automateLoginSignup">automateLoginSignup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="cancelPopUp">cancelPopUp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="cancelWishListing">cancelWishListing</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="clickOnWishlistCTA">clickOnWishlistCTA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="switchBackToFirstTab">switchBackToFirstTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="switchFocusToPopup">switchFocusToPopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyAssemblyFee">verifyAssemblyFee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyCartItems">verifyCartItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyCartMrp">verifyCartMrp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyCartProductName">verifyCartProductName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyCartSummaryFurnitureProtection">verifyCartSummaryFurnitureProtection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyDeliveryByText">verifyDeliveryByText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyDeliveryFee">verifyDeliveryFee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyPriceChangeWithFurnitureProtection">verifyPriceChangeWithFurnitureProtection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifySubTotalOnCart">verifySubTotalOnCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyYouPayPrice">verifyYouPayPrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.CartTest" class="method navigator-link" hash-for-method="verifyYouSavePrice">verifyYouSavePrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Suite" title="testCase.VipTest" class="method navigator-link" hash-for-method="vipAllScenarios">vipAllScenarios</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Smoke_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Smoke_Suite" class="panel Smoke_Suite">
+          <div class="suite-Smoke_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCase.CartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="againClickOnWishlistCTA">
+                  </a> <!-- againClickOnWishlistCTA -->
+                  <span class="method-name">againClickOnWishlistCTA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="againSwitchFocusToPopup">
+                  </a> <!-- againSwitchFocusToPopup -->
+                  <span class="method-name">againSwitchFocusToPopup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="cancelPopUp">
+                  </a> <!-- cancelPopUp -->
+                  <span class="method-name">cancelPopUp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="cancelWishListing">
+                  </a> <!-- cancelWishListing -->
+                  <span class="method-name">cancelWishListing</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnWishlistCTA">
+                  </a> <!-- clickOnWishlistCTA -->
+                  <span class="method-name">clickOnWishlistCTA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="switchBackToFirstTab">
+                  </a> <!-- switchBackToFirstTab -->
+                  <span class="method-name">switchBackToFirstTab</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="switchFocusToPopup">
+                  </a> <!-- switchFocusToPopup -->
+                  <span class="method-name">switchFocusToPopup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAssemblyFee">
+                  </a> <!-- verifyAssemblyFee -->
+                  <span class="method-name">verifyAssemblyFee</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCartItems">
+                  </a> <!-- verifyCartItems -->
+                  <span class="method-name">verifyCartItems</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCartMrp">
+                  </a> <!-- verifyCartMrp -->
+                  <span class="method-name">verifyCartMrp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCartProductName">
+                  </a> <!-- verifyCartProductName -->
+                  <span class="method-name">verifyCartProductName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCartSummaryFurnitureProtection">
+                  </a> <!-- verifyCartSummaryFurnitureProtection -->
+                  <span class="method-name">verifyCartSummaryFurnitureProtection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeliveryByText">
+                  </a> <!-- verifyDeliveryByText -->
+                  <span class="method-name">verifyDeliveryByText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeliveryFee">
+                  </a> <!-- verifyDeliveryFee -->
+                  <span class="method-name">verifyDeliveryFee</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPriceChangeWithFurnitureProtection">
+                  </a> <!-- verifyPriceChangeWithFurnitureProtection -->
+                  <span class="method-name">verifyPriceChangeWithFurnitureProtection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySubTotalOnCart">
+                  </a> <!-- verifySubTotalOnCart -->
+                  <span class="method-name">verifySubTotalOnCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyYouPayPrice">
+                  </a> <!-- verifyYouPayPrice -->
+                  <span class="method-name">verifyYouPayPrice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyYouSavePrice">
+                  </a> <!-- verifyYouSavePrice -->
+                  <span class="method-name">verifyYouSavePrice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Suite-class-passed -->
+          <div class="suite-Smoke_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCase.VipTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="vipAllScenarios">
+                  </a> <!-- vipAllScenarios -->
+                  <span class="method-name">vipAllScenarios</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Suite-class-passed -->
+          <div class="suite-Smoke_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCase.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidLoginSignup">
+                  </a> <!-- InvalidLoginSignup -->
+                  <span class="method-name">InvalidLoginSignup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="automateLoginSignup">
+                  </a> <!-- automateLoginSignup -->
+                  <span class="method-name">automateLoginSignup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Suite-class-passed -->
+        </div> <!-- panel Smoke_Suite -->
+        <div panel-name="test-xml-Smoke_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\QA Automation\AutomationFramework\TestRunner\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Smoke Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Smoke Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCase.LoginTest&quot;/&gt;
+      &lt;class name=&quot;testCase.VipTest&quot;/&gt;
+      &lt;class name=&quot;testCase.CartTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Smoke Test --&gt;
+&lt;/suite&gt; &lt;!-- Smoke Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Smoke_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Smoke Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Smoke Test (3 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Smoke_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Smoke Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Smoke_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Smoke Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Smoke_Suite');
+function tableData_Smoke_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(21);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'vipAllScenarios')
+data.setCell(0, 2, 'testCase.VipTest')
+data.setCell(0, 3, 22485);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'InvalidLoginSignup')
+data.setCell(1, 2, 'testCase.LoginTest')
+data.setCell(1, 3, 18739);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'automateLoginSignup')
+data.setCell(2, 2, 'testCase.LoginTest')
+data.setCell(2, 3, 13317);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'switchBackToFirstTab')
+data.setCell(3, 2, 'testCase.CartTest')
+data.setCell(3, 3, 9185);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifySubTotalOnCart')
+data.setCell(4, 2, 'testCase.CartTest')
+data.setCell(4, 3, 2068);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyPriceChangeWithFurnitureProtection')
+data.setCell(5, 2, 'testCase.CartTest')
+data.setCell(5, 3, 1670);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyYouPayPrice')
+data.setCell(6, 2, 'testCase.CartTest')
+data.setCell(6, 3, 1084);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyYouSavePrice')
+data.setCell(7, 2, 'testCase.CartTest')
+data.setCell(7, 3, 1054);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'switchFocusToPopup')
+data.setCell(8, 2, 'testCase.CartTest')
+data.setCell(8, 3, 1038);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'cancelWishListing')
+data.setCell(9, 2, 'testCase.CartTest')
+data.setCell(9, 3, 585);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyCartSummaryFurnitureProtection')
+data.setCell(10, 2, 'testCase.CartTest')
+data.setCell(10, 3, 563);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyCartProductName')
+data.setCell(11, 2, 'testCase.CartTest')
+data.setCell(11, 3, 556);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyCartMrp')
+data.setCell(12, 2, 'testCase.CartTest')
+data.setCell(12, 3, 554);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyDeliveryByText')
+data.setCell(13, 2, 'testCase.CartTest')
+data.setCell(13, 3, 545);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyCartItems')
+data.setCell(14, 2, 'testCase.CartTest')
+data.setCell(14, 3, 543);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'againSwitchFocusToPopup')
+data.setCell(15, 2, 'testCase.CartTest')
+data.setCell(15, 3, 533);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'againClickOnWishlistCTA')
+data.setCell(16, 2, 'testCase.CartTest')
+data.setCell(16, 3, 97);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'cancelPopUp')
+data.setCell(17, 2, 'testCase.CartTest')
+data.setCell(17, 3, 89);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'clickOnWishlistCTA')
+data.setCell(18, 2, 'testCase.CartTest')
+data.setCell(18, 3, 87);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyAssemblyFee')
+data.setCell(19, 2, 'testCase.CartTest')
+data.setCell(19, 3, 40);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyDeliveryFee')
+data.setCell(20, 2, 'testCase.CartTest')
+data.setCell(20, 3, 36);
+window.suiteTableData['Smoke_Suite']= { tableData: data, tableDiv: 'times-div-Smoke_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-Smoke_Suite">
+              </div> <!-- times-div-Smoke_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Smoke_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Smoke Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Smoke_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">4 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCase.CartTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCase.VipTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Smoke_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCase.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">InvalidLoginSignup</span>
+                <span class="method-start">7836 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">automateLoginSignup</span>
+                <span class="method-start">26646 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCase.VipTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">vipAllScenarios</span>
+                <span class="method-start">39967 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCase.CartTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyCartItems</span>
+                <span class="method-start">62456 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCartProductName</span>
+                <span class="method-start">63001 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickOnWishlistCTA</span>
+                <span class="method-start">63561 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">switchFocusToPopup</span>
+                <span class="method-start">63655 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">cancelPopUp</span>
+                <span class="method-start">64700 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">againClickOnWishlistCTA</span>
+                <span class="method-start">64795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">againSwitchFocusToPopup</span>
+                <span class="method-start">64895 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">cancelWishListing</span>
+                <span class="method-start">65432 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyDeliveryFee</span>
+                <span class="method-start">66023 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAssemblyFee</span>
+                <span class="method-start">66062 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPriceChangeWithFurnitureProtection</span>
+                <span class="method-start">66105 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyDeliveryByText</span>
+                <span class="method-start">67779 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCartMrp</span>
+                <span class="method-start">68328 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCartSummaryFurnitureProtection</span>
+                <span class="method-start">68896 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubTotalOnCart</span>
+                <span class="method-start">69462 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyYouPayPrice</span>
+                <span class="method-start">71535 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyYouSavePrice</span>
+                <span class="method-start">72624 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">switchBackToFirstTab</span>
+                <span class="method-start">73681 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCase.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">82923 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

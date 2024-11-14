@@ -1,0 +1,14 @@
+testCase\LoginTest.class
+testCase\HomepageTest.class
+testCase\SearchTestProduct$1.class
+testCase\VipFlow.class
+testCase\PaymentTest.class
+testCase\VipTest.class
+testCase\OrderConfirmationPage.class
+base\BaseTest.class
+utilities\EmailOTPReader.class
+utilities\ReadPropertyFile.class
+testCase\CartTest.class
+testCase\Normal_Clip.class
+testCase\CartFlow.class
+testCase\SearchTestProduct.class
