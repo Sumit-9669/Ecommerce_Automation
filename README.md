@@ -1,19 +1,23 @@
 # qa-e2e-automation-testng-framework
 
+## Description
+This project is created by **Sumit Pande** for an End-to-End Automation Framework built with **Selenium WebDriver**, **TestNG**, and **Allure Reports**. It is designed to automate functional tests for web applications, ensuring smooth and error-free user experiences. The framework supports integration with **Maven** for dependency management and **GitLab** for continuous integration and version control.
 
+## Badges
+[![Build Status](https://git.trendsys.in/QaAutomation/qa-e2e-automation-testng-framework/badges/master/pipeline.svg)](https://git.trendsys.in/QaAutomation/qa-e2e-automation-testng-framework/pipelines)
 
-## Getting started
+## Visuals
+Include images of the application flow, Allure reports, or sample screenshots here.
+
+## Getting Started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Add your files
+- [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
+```bash
 cd existing_repo
 git remote add origin https://git.trendsys.in/QaAutomation/qa-e2e-automation-testng-framework.git
 git branch -M master
@@ -71,17 +75,19 @@ Within a particular ecosystem, there may be a common way of installing things, s
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
 ## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+For support, feel free to create an issue on the GitLab repository, or contact the project maintainer.
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+1. Add more test cases for different web applications.
+2. Integrate additional reporting tools for enhanced test results analysis.
+3. Expand CI/CD pipeline for better automation and deployment.
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+We welcome contributions! If you'd like to contribute to this project, please fork the repository, make changes, and submit a pull request with a clear explanation of the changes.
+Development Guidelines:
+Ensure that your code passes all tests.
+Please write test cases for new features or fixes.
+Follow the existing code style.
 
 ## Authors and acknowledgment
 ### Authors:
