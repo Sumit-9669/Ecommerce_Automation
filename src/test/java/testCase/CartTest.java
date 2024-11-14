@@ -286,7 +286,7 @@ public class CartTest extends BaseTest {
 	    // Attempt clicking using JavaScript to bypass any interception
 	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", pepperfryLogo);
 	    System.out.println("Clicked on the Pepperfry logo using JavaScript.");
-	    Thread.sleep(3000);
+	    Thread.sleep(4000);
 	}
 	
 
