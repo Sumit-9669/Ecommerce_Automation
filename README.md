@@ -84,7 +84,13 @@ For people who want to make changes to your project, it's helpful to have some d
 You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+### Authors:
+- **Sumit Pande** – _QA Engineer at Pepperfry_ – Developed and maintained the automation framework, implemented test cases, and integrated Allure reporting.
+
+### Acknowledgments:
+- Thanks to the **Pepperfry QA Team** for their continuous feedback and support.
+- Special thanks to the **open-source community** for providing tools like **Selenium**, **TestNG**, **Allure Reports**, and **Maven** that made this project possible.
+- Acknowledging the contributions of **GitHub** and **GitLab** for hosting the repositories. 
 
 ## License
 For open source projects, say how it is licensed.
