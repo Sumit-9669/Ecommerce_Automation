@@ -50,7 +50,7 @@ public class Normal_Clip extends BaseTest {
 	}
 
 	@Test
-	@Description("Verifying Home Decor Meta")
+	@Description("Verifying Home Decor Meta.")
 	public void testHomeDecorMenu() throws InterruptedException {
 		// List of submenu locators under Home Decor
 		List<String> homeDecorSubmenus = List.of("religious_idols", "vaccum_cleaners", "wall_clocks", "desk_pots");
