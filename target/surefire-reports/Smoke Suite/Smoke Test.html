@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Smoke Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>32/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>39/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 14 06:54:27 IST 2024</td>
+<td>Started on:</td><td>Thu Dec 19 12:04:23 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>232 seconds (232626 ms)</td>
+<tr><td>Total time:</td><td>343 seconds (343250 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,72 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testCase.OrderConfirmationPage.verifyOrderPlacement()'><b>verifyOrderPlacement</b><br>Test class: testCase.OrderConfirmationPage</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //p[@class=&apos;oc-status-ttl font-bold text-lg&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54124}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54124/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d6aa9ad6239afc797cba3d0bf0f0574
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at testCase.OrderConfirmationPage.verifyOrderPlacement(OrderConfirmationPage.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace407327219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace407327219'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //p[@class=&apos;oc-status-ttl font-bold text-lg&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\Sumit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54124}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54124/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d6aa9ad6239afc797cba3d0bf0f0574
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at testCase.OrderConfirmationPage.verifyOrderPlacement(OrderConfirmationPage.java:20)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-</pre></div></td>
-<td>10</td>
-<td>testCase.OrderConfirmationPage@7188af83</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -142,165 +76,200 @@ Session ID: 4d6aa9ad6239afc797cba3d0bf0f0574
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='testCase.Normal_Clip.verifyMattressesFilters()'><b>verifyMattressesFilters</b><br>Test class: testCase.Normal_Clip</td>
+<td></td>
+<td>8</td>
+<td>testCase.Normal_Clip@3e08ff24</td></tr>
+<tr>
 <td title='testCase.CartTest.verifyDeliveryByText()'><b>verifyDeliveryByText</b><br>Test class: testCase.CartTest</td>
 <td></td>
 <td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.LoginTest.InvalidLoginSignup()'><b>InvalidLoginSignup</b><br>Test class: testCase.LoginTest</td>
-<td></td>
-<td>19</td>
-<td>testCase.LoginTest@31ea9581</td></tr>
-<tr>
-<td title='testCase.CartTest.verifyCartSummaryFurnitureProtection()'><b>verifyCartSummaryFurnitureProtection</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.Normal_Clip.testHomeDecorMenu()'><b>testHomeDecorMenu</b><br>Test class: testCase.Normal_Clip</td>
-<td></td>
-<td>11</td>
-<td>testCase.Normal_Clip@2b40ff9c</td></tr>
-<tr>
-<td title='testCase.VipFlow.addToCartAndGoToCart()'><b>addToCartAndGoToCart</b><br>Test class: testCase.VipFlow</td>
-<td></td>
-<td>6</td>
-<td>testCase.VipFlow@70ed52de</td></tr>
-<tr>
-<td title='testCase.CartTest.againSwitchFocusToPopup()'><b>againSwitchFocusToPopup</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.CartTest.switchBackToFirstTab()'><b>switchBackToFirstTab</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>9</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.CartTest.verifySubTotalOnCart()'><b>verifySubTotalOnCart</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>2</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.CartTest.verifyDeliveryFee()'><b>verifyDeliveryFee</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
 <tr>
 <td title='testCase.CartTest.verifyCartMrp()'><b>verifyCartMrp</b><br>Test class: testCase.CartTest</td>
 <td></td>
 <td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
 <tr>
-<td title='testCase.CartTest.verifyAssemblyFee()'><b>verifyAssemblyFee</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>10</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.CartTest.switchFocusToPopup()'><b>switchFocusToPopup</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>1</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.Normal_Clip.testFurnitureMenu()'><b>testFurnitureMenu</b><br>Test class: testCase.Normal_Clip</td>
-<td></td>
-<td>15</td>
-<td>testCase.Normal_Clip@2b40ff9c</td></tr>
-<tr>
-<td title='testCase.CartTest.cancelWishListing()'><b>cancelWishListing</b><br>Test class: testCase.CartTest</td>
+<td title='testCase.CartTest.againSwitchFocusToPopup()'><b>againSwitchFocusToPopup</b><br>Test class: testCase.CartTest</td>
 <td></td>
 <td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.SearchTestProduct.searchProductAfterLogin()'><b>searchProductAfterLogin</b><br>Test class: testCase.SearchTestProduct</td>
-<td></td>
-<td>8</td>
-<td>testCase.SearchTestProduct@5ddeb7cb</td></tr>
-<tr>
-<td title='testCase.CartTest.verifyCartItems()'><b>verifyCartItems</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.Normal_Clip.verifyFurnitureFilters()'><b>verifyFurnitureFilters</b><br>Test class: testCase.Normal_Clip</td>
-<td></td>
-<td>8</td>
-<td>testCase.Normal_Clip@2b40ff9c</td></tr>
-<tr>
-<td title='testCase.CartTest.verifyCartProductName()'><b>verifyCartProductName</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
 <tr>
 <td title='testCase.VipTest.vipAllScenarios()'><b>vipAllScenarios</b><br>Test class: testCase.VipTest</td>
 <td></td>
-<td>25</td>
-<td>testCase.VipTest@3e08ff24</td></tr>
+<td>36</td>
+<td>testCase.VipTest@4d1c005e</td></tr>
 <tr>
-<td title='testCase.CartFlow.qtyDropDown()'><b>qtyDropDown</b><br>Test class: testCase.CartFlow</td>
+<td title='testCase.LoginTest.InvalidLoginSignup()'><b>InvalidLoginSignup</b><br>Test class: testCase.LoginTest</td>
 <td></td>
-<td>1</td>
-<td>testCase.CartFlow@496bc455</td></tr>
+<td>18</td>
+<td>testCase.LoginTest@31ea9581</td></tr>
 <tr>
-<td title='testCase.Normal_Clip.testMattressesMenu()'><b>testMattressesMenu</b><br>Test class: testCase.Normal_Clip</td>
+<td title='testCase.PaymentTest.hdfcBankInternetBankingPM()'><b>hdfcBankInternetBankingPM</b><br>Test class: testCase.PaymentTest</td>
 <td></td>
-<td>11</td>
-<td>testCase.Normal_Clip@2b40ff9c</td></tr>
+<td>14</td>
+<td>testCase.PaymentTest@70ed52de</td></tr>
 <tr>
-<td title='testCase.CartTest.verifyYouSavePrice()'><b>verifyYouSavePrice</b><br>Test class: testCase.CartTest</td>
+<td title='testCase.Normal_Clip.testFurnitureMenu()'><b>testFurnitureMenu</b><br>Test class: testCase.Normal_Clip</td>
 <td></td>
-<td>1</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.CartTest.verifyYouPayPrice()'><b>verifyYouPayPrice</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>1</td>
-<td>testCase.CartTest@24569dba</td></tr>
+<td>14</td>
+<td>testCase.Normal_Clip@3e08ff24</td></tr>
 <tr>
 <td title='testCase.Normal_Clip.verifyHomeDecorFilters()'><b>verifyHomeDecorFilters</b><br>Test class: testCase.Normal_Clip</td>
 <td></td>
 <td>8</td>
-<td>testCase.Normal_Clip@2b40ff9c</td></tr>
+<td>testCase.Normal_Clip@3e08ff24</td></tr>
 <tr>
-<td title='testCase.PaymentTest.paymentOptions()'><b>paymentOptions</b><br>Test class: testCase.PaymentTest</td>
+<td title='testCase.CartTest.enterGSTINAndSave()'><b>enterGSTINAndSave</b><br>Test class: testCase.CartTest</td>
 <td></td>
-<td>13</td>
-<td>testCase.PaymentTest@59402b8f</td></tr>
+<td>8</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
 <tr>
-<td title='testCase.CartTest.cancelPopUp()'><b>cancelPopUp</b><br>Test class: testCase.CartTest</td>
+<td title='testCase.Brand_Clip.verifySortFilter()'><b>verifySortFilter</b><br>Test class: testCase.Brand_Clip</td>
 <td></td>
-<td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
-<tr>
-<td title='testCase.LoginTest.automateLoginSignup()'><b>automateLoginSignup</b><br>Test class: testCase.LoginTest</td>
-<td></td>
-<td>13</td>
-<td>testCase.LoginTest@31ea9581</td></tr>
-<tr>
-<td title='testCase.HomepageTest.testClickingHomepageSections()'><b>testClickingHomepageSections</b><br>Test class: testCase.HomepageTest</td>
-<td></td>
-<td>37</td>
-<td>testCase.HomepageTest@451001e5</td></tr>
-<tr>
-<td title='testCase.CartTest.clickOnWishlistCTA()'><b>clickOnWishlistCTA</b><br>Test class: testCase.CartTest</td>
-<td></td>
-<td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
+<td>5</td>
+<td>testCase.Brand_Clip@2b40ff9c</td></tr>
 <tr>
 <td title='testCase.CartTest.verifyPriceChangeWithFurnitureProtection()'><b>verifyPriceChangeWithFurnitureProtection</b><br>Test class: testCase.CartTest</td>
 <td></td>
 <td>1</td>
-<td>testCase.CartTest@24569dba</td></tr>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.HomepageTest.testClickingHomepageSections()'><b>testClickingHomepageSections</b><br>Test class: testCase.HomepageTest</td>
+<td></td>
+<td>38</td>
+<td>testCase.HomepageTest@451001e5</td></tr>
+<tr>
+<td title='testCase.Brand_Clip.switchBackToFirstTab()'><b>switchBackToFirstTab</b><br>Test class: testCase.Brand_Clip</td>
+<td></td>
+<td>5</td>
+<td>testCase.Brand_Clip@2b40ff9c</td></tr>
 <tr>
 <td title='testCase.CartTest.againClickOnWishlistCTA()'><b>againClickOnWishlistCTA</b><br>Test class: testCase.CartTest</td>
 <td></td>
 <td>0</td>
-<td>testCase.CartTest@24569dba</td></tr>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
 <tr>
-<td title='testCase.Normal_Clip.verifyMattressesFilters()'><b>verifyMattressesFilters</b><br>Test class: testCase.Normal_Clip</td>
+<td title='testCase.PaymentTest.searchTestSku()'><b>searchTestSku</b><br>Test class: testCase.PaymentTest</td>
+<td></td>
+<td>9</td>
+<td>testCase.PaymentTest@70ed52de</td></tr>
+<tr>
+<td title='testCase.LoginTest.automateLoginSignup()'><b>automateLoginSignup</b><br>Test class: testCase.LoginTest</td>
+<td></td>
+<td>14</td>
+<td>testCase.LoginTest@31ea9581</td></tr>
+<tr>
+<td title='testCase.CartTest.verifyCartProductName()'><b>verifyCartProductName</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.verifyAssemblyFee()'><b>verifyAssemblyFee</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.verifyCartItems()'><b>verifyCartItems</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.PaymentTest.axisBankInternetBankingPM()'><b>axisBankInternetBankingPM</b><br>Test class: testCase.PaymentTest</td>
+<td></td>
+<td>10</td>
+<td>testCase.PaymentTest@70ed52de</td></tr>
+<tr>
+<td title='testCase.Normal_Clip.testHomeDecorMenu()'><b>testHomeDecorMenu</b><br>Test class: testCase.Normal_Clip</td>
+<td></td>
+<td>11</td>
+<td>testCase.Normal_Clip@3e08ff24</td></tr>
+<tr>
+<td title='testCase.CartTest.verifyCartSummaryFurnitureProtection()'><b>verifyCartSummaryFurnitureProtection</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.switchFocusToPopup()'><b>switchFocusToPopup</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>1</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.verifyDeliveryFee()'><b>verifyDeliveryFee</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.verifyYouPayPrice()'><b>verifyYouPayPrice</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>1</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.verifyYouSavePrice()'><b>verifyYouSavePrice</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>1</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.cancelWishListing()'><b>cancelWishListing</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.CartTest.verifySubTotalOnCart()'><b>verifySubTotalOnCart</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>2</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.Brand_Clip.NavigateToMultipleBrandPages()'><b>NavigateToMultipleBrandPages</b><br>Test class: testCase.Brand_Clip</td>
+<td></td>
+<td>46</td>
+<td>testCase.Brand_Clip@2b40ff9c</td></tr>
+<tr>
+<td title='testCase.PaymentTest.paytmWallet()'><b>paytmWallet</b><br>Test class: testCase.PaymentTest</td>
+<td></td>
+<td>16</td>
+<td>testCase.PaymentTest@70ed52de</td></tr>
+<tr>
+<td title='testCase.PaymentTest.mobikwikWallet()'><b>mobikwikWallet</b><br>Test class: testCase.PaymentTest</td>
+<td></td>
+<td>14</td>
+<td>testCase.PaymentTest@70ed52de</td></tr>
+<tr>
+<td title='testCase.PaymentTest.giftCard()'><b>giftCard</b><br>Test class: testCase.PaymentTest</td>
+<td></td>
+<td>16</td>
+<td>testCase.PaymentTest@70ed52de</td></tr>
+<tr>
+<td title='testCase.Brand_Clip.verifyMoreFilters()'><b>verifyMoreFilters</b><br>Test class: testCase.Brand_Clip</td>
+<td></td>
+<td>9</td>
+<td>testCase.Brand_Clip@2b40ff9c</td></tr>
+<tr>
+<td title='testCase.Normal_Clip.verifyFurnitureFilters()'><b>verifyFurnitureFilters</b><br>Test class: testCase.Normal_Clip</td>
 <td></td>
 <td>8</td>
-<td>testCase.Normal_Clip@2b40ff9c</td></tr>
+<td>testCase.Normal_Clip@3e08ff24</td></tr>
+<tr>
+<td title='testCase.CartTest.cancelPopUp()'><b>cancelPopUp</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testCase.Normal_Clip.testMattressesMenu()'><b>testMattressesMenu</b><br>Test class: testCase.Normal_Clip</td>
+<td></td>
+<td>10</td>
+<td>testCase.Normal_Clip@3e08ff24</td></tr>
+<tr>
+<td title='testCase.Brand_Clip.removefilter()'><b>removefilter</b><br>Test class: testCase.Brand_Clip</td>
+<td></td>
+<td>2</td>
+<td>testCase.Brand_Clip@2b40ff9c</td></tr>
+<tr>
+<td title='testCase.CartTest.clickOnWishlistCTA()'><b>clickOnWishlistCTA</b><br>Test class: testCase.CartTest</td>
+<td></td>
+<td>0</td>
+<td>testCase.CartTest@5ddeb7cb</td></tr>
 </table><p>
 </body>
 </html>

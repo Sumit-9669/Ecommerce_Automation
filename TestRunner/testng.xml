@@ -7,15 +7,12 @@
 	<test name="Smoke Test">
 		<classes>
 			<class name="testCase.LoginTest" />
-			<!--<class name="testCase.HomepageTest" />
-			<class name="testCase.Normal_Clip" />-->
+			<class name="testCase.HomepageTest" />
+			<class name="testCase.Brand_Clip" />
+			<class name="testCase.Normal_Clip" />
 			<class name="testCase.VipTest" />
 			<class name="testCase.CartTest" />
-			<!--<class name="testCase.SearchTestProduct" />
-			<class name="testCase.VipFlow" />
-			<class name="testCase.CartFlow" />
 			<class name="testCase.PaymentTest" />
-			<class name="testCase.OrderConfirmationPage" />-->
 		</classes>
 	</test>
 </suite>
