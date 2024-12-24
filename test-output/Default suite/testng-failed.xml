@@ -3,20 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.CartTest">
+      <class name="testCase.Search_Clip">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="againSwitchFocusToPopup"/>
-          <include name="cancelWishListing"/>
-          <include name="clickOnWishlistCTA"/>
-          <include name="cancelPopUp"/>
-          <include name="verifyCartItems"/>
-          <include name="againClickOnWishlistCTA"/>
-          <include name="verifyCartProductName"/>
-          <include name="switchFocusToPopup"/>
+          <include name="searchClipFilters"/>
         </methods>
-      </class> <!-- testCase.CartTest -->
+      </class> <!-- testCase.Search_Clip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

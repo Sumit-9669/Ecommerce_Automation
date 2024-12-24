@@ -3,9 +3,12 @@ testCase\HomepageTest.class
 testCase\PaymentTest.class
 testCase\VipTest.class
 utilities\ScreenshotUtil.class
+testCase\Order_Confirmation.class
 base\BaseTest.class
 utilities\EmailOTPReader.class
 utilities\ReadPropertyFile.class
 testCase\Brand_Clip.class
 testCase\CartTest.class
 testCase\Normal_Clip.class
+testCase\Search_Clip.class
+testCase\MyOrders.class

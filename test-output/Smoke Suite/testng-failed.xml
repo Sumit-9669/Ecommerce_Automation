@@ -6,41 +6,20 @@
   </listeners>
   <test thread-count="5" name="Smoke Test(failed)">
     <classes>
-      <class name="testCase.OrderConfirmationPage">
+      <class name="testCase.Order_Confirmation">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyOrderPlacement"/>
+          <include name="verifyTrackItem"/>
         </methods>
-      </class> <!-- testCase.OrderConfirmationPage -->
-      <class name="testCase.LoginTest">
+      </class> <!-- testCase.Order_Confirmation -->
+      <class name="testCase.Search_Clip">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="InvalidLoginSignup"/>
+          <include name="searchClipFilters"/>
         </methods>
-      </class> <!-- testCase.LoginTest -->
-      <class name="testCase.CartTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="qtyDropDown"/>
-        </methods>
-      </class> <!-- testCase.CartTest -->
-      <class name="testCase.PaymentTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="paymentOptions"/>
-        </methods>
-      </class> <!-- testCase.PaymentTest -->
-      <class name="testCase.VipTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="addToCartAndGoToCart"/>
-        </methods>
-      </class> <!-- testCase.VipTest -->
+      </class> <!-- testCase.Search_Clip -->
     </classes>
   </test> <!-- Smoke Test(failed) -->
 </suite> <!-- Failed suite [Smoke Suite] -->

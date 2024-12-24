@@ -1,1 +1,7 @@
 allure-results/
+/target/
+/test-output/
+*.html
+*.xml
+*.lst
+*.js
