@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import base.BaseTest;
 import io.qameta.allure.Description;
 import utilities.EmailOTPReader;
+import utilities.ScreenshotUtil;
 
 public class LoginTest extends BaseTest {
 
@@ -69,6 +70,7 @@ public class LoginTest extends BaseTest {
 
         // Ensure first test case passes successfully
         Assert.assertTrue(true, "Invalid login/signup test case passed.");
+        ScreenshotUtil.takeScreenshot("Attempting to login with Invalid Credentials");
     }
 
     @Test(priority = 2)
@@ -103,7 +105,7 @@ public class LoginTest extends BaseTest {
         // Call the email reader function to get OTP from inbox
         String otp = EmailOTPReader.getOTPFromEmail("imap.gmail.com", "imaps", "sumit.p@pepperfry.com",
                 "ieqbqpmkwitkbrxc");
-        System.out.println("OTP fetched: " + otp);
+        //System.out.println("OTP fetched: " + otp);
         if (otp != null) {
             // Enter OTP into the field on the webpage
             WebElement otpInput = driver.findElement(By.xpath(loc.getProperty("otp_input")));
@@ -117,6 +119,7 @@ public class LoginTest extends BaseTest {
         }
 
         System.out.println("Login successful");
+        ScreenshotUtil.takeScreenshot("Successfully logged in with valid credentials");
 
     }
 }
