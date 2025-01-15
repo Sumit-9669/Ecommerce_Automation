@@ -11,7 +11,6 @@ import io.qameta.allure.Description;
 import java.time.Duration;
 
 public class HomepageTest extends BaseTest {
-
 	private WebDriverWait wait;
 
 	@Test(dependsOnMethods = { "testCase.LoginTest.automateLoginSignup" })
@@ -26,7 +25,6 @@ public class HomepageTest extends BaseTest {
 			if (iframe != null) {
 				// Switch to the iframe
 				driver.switchTo().frame(iframe);
-
 				// Wait for the close button to be clickable (using WebDriverWait)
 				WebElement closeButton = wait.until(
 						ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("popup_close_button"))));
@@ -38,7 +36,6 @@ public class HomepageTest extends BaseTest {
 			System.out.println("Error: " + e.getMessage());
 			e.printStackTrace();
 		}
-
 		clickBannerAndNavigateBack(loc.getProperty("lhs_banner"), "LHS Banner");
 		// clickBannerAndNavigateBack(loc.getProperty("rhs_banner"), "RHS Banner");
 		clickBannerAndNavigateBack(loc.getProperty("woodsworth_banner"), "Woodsworth Banner");
@@ -50,7 +47,7 @@ public class HomepageTest extends BaseTest {
 	/**
 	 * Utility method to click a banner or section and navigate back to the
 	 * homepage.
-	 * 
+	 *
 	 * @param bannerLocator XPath locator for the section or banner element.
 	 * @param sectionName   Descriptive name for logging purposes.
 	 * @throws InterruptedException In case the thread sleep is interrupted.
@@ -60,13 +57,10 @@ public class HomepageTest extends BaseTest {
 			// Wait for the section/banner to be present
 			WebElement sectionElement = wait
 					.until(ExpectedConditions.presenceOfElementLocated(By.xpath(bannerLocator)));
-
 			// Scroll to the element to make it visible
 			scrollToElement(sectionElement);
-
 			// Wait for a short period to allow any animations/overlays to finish
 			Thread.sleep(3000);
-
 			try {
 				// Attempt to click the element
 				wait.until(ExpectedConditions.elementToBeClickable(sectionElement)).click();
@@ -78,14 +72,11 @@ public class HomepageTest extends BaseTest {
 				js.executeScript("arguments[0].click();", sectionElement);
 				System.out.println("JavaScript click performed on " + sectionName + ".");
 			}
-
 			// Wait for a short period to simulate interaction
 			Thread.sleep(3000);
-
 			// Navigate back to the homepage
 			driver.navigate().back();
 			Thread.sleep(3000); // Wait for the page to reload
-
 		} catch (Exception e) {
 			System.err.println("Error while interacting with " + sectionName + ": " + e.getMessage());
 		}
@@ -94,7 +85,7 @@ public class HomepageTest extends BaseTest {
 	/**
 	 * Scroll to Mintwud Banner, click it, and then click on Pepperfry Logo without
 	 * scrolling back.
-	 * 
+	 *
 	 * @param bannerLocator XPath locator for the Mintwud Banner.
 	 * @param logoLocator   XPath locator for the Pepperfry Logo.
 	 * @param bannerName    Descriptive name for the banner (Mintwud) for logging
@@ -110,17 +101,13 @@ public class HomepageTest extends BaseTest {
 			// Scroll to Mintwud Banner and click it
 			WebElement bannerElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(bannerLocator)));
 			scrollToElement(bannerElement); // Scroll to Mintwud Banner
-
 			// Wait for a short period to ensure proper loading
 			Thread.sleep(3000);
-
 			// Click on Mintwud Banner
 			wait.until(ExpectedConditions.elementToBeClickable(bannerElement)).click();
 			System.out.println("Clicked on " + bannerName + " successfully.");
-
 			// Wait for a short period to simulate interaction
 			Thread.sleep(3000);
-
 			// Now click the Pepperfry Logo directly
 			WebElement logoElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(logoLocator)));
 			System.out.println("Pepperfry Logo found. Clicking on it.");
@@ -135,7 +122,8 @@ public class HomepageTest extends BaseTest {
 
 	/**
 	 * Scrolls the page to bring the specified element into view.
-	 * 
+	 *
+>>>>>>> e677b728a6047d06e60a43fccd3d2b306c06ab14
 	 * @param element The web element to scroll to.
 	 */
 	private void scrollToElement(WebElement element) {
@@ -147,4 +135,5 @@ public class HomepageTest extends BaseTest {
 			System.err.println("Error while scrolling to element: " + e.getMessage());
 		}
 	}
+
 }
