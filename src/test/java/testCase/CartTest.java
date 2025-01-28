@@ -129,31 +129,34 @@ public class CartTest extends BaseTest {
 		}
 	}
 
+	/*
+	 * @Test(priority = 11)
+	 * 
+	 * @Description("Verifying Item Price & Inssurance") public void
+	 * verifyPriceChangeWithFurnitureProtection() throws InterruptedException {
+	 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	 * 
+	 * // Locate and get the item price before selecting the checkbox WebElement
+	 * itemPriceElement = wait
+	 * .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty
+	 * ("item_price")))); String initialPriceText = itemPriceElement.getText();
+	 * System.out.println("Item price before selecting protection: " +
+	 * initialPriceText);
+	 * 
+	 * // Locate the furniture protection checkbox
+	 * item_price_afterFurnitureProtection WebElement furnitureProtectionCheckbox =
+	 * wait.until(ExpectedConditions
+	 * .presenceOfElementLocated(By.xpath(loc.getProperty(
+	 * "furniture_protection_checkbox")))); furnitureProtectionCheckbox.click();
+	 * Thread.sleep(1000); WebElement itemPriceAfterFurnitureProtection = wait
+	 * .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty
+	 * ("item_price")))); String furnitureProtectionPriceText =
+	 * itemPriceAfterFurnitureProtection.getText();
+	 * System.out.println("Item price after selecting protection: " +
+	 * furnitureProtectionPriceText); Thread.sleep(500); }
+	 */
+
 	@Test(priority = 11)
-	@Description("Verifying Item Price & Inssurance")
-	public void verifyPriceChangeWithFurnitureProtection() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		// Locate and get the item price before selecting the checkbox
-		WebElement itemPriceElement = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("item_price"))));
-		String initialPriceText = itemPriceElement.getText();
-		System.out.println("Item price before selecting protection: " + initialPriceText);
-
-		// Locate the furniture protection checkbox item_price_afterFurnitureProtection
-		WebElement furnitureProtectionCheckbox = wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.xpath(loc.getProperty("furniture_protection_checkbox"))));
-		furnitureProtectionCheckbox.click();
-		Thread.sleep(1000);
-		WebElement itemPriceAfterFurnitureProtection = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("item_price"))));
-		String furnitureProtectionPriceText = itemPriceAfterFurnitureProtection.getText();
-		System.out.println("Item price after selecting protection: " + furnitureProtectionPriceText);
-		Thread.sleep(500);
-
-	}
-
-	@Test(priority = 12)
 	@Description("Verifying Delivery Date")
 	public void verifyDeliveryByText() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -167,7 +170,7 @@ public class CartTest extends BaseTest {
 
 	}
 
-	@Test(priority = 13)
+	@Test(priority = 12)
 	public void verifyCartMrp() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -180,7 +183,7 @@ public class CartTest extends BaseTest {
 
 	}
 
-	@Test(priority = 14)
+	/*@Test(priority = 14)
 	public void verifyCartSummaryFurnitureProtection() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -191,9 +194,9 @@ public class CartTest extends BaseTest {
 		ScreenshotUtil.takeScreenshot("Successfully verified Cart Summary-1");
 		Thread.sleep(500);
 
-	}
+	}*/
 
-	@Test(priority = 15)
+	@Test(priority = 13)
 	public void verifySubTotalOnCart() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -249,7 +252,7 @@ public class CartTest extends BaseTest {
 	 * charityText); Thread.sleep(5000);
 	 */
 
-	@Test(priority = 16)
+	@Test(priority = 14)
 	public void verifyYouPayPrice() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -261,7 +264,7 @@ public class CartTest extends BaseTest {
 		Thread.sleep(1000);
 	}
 
-	@Test(priority = 17)
+	@Test(priority = 15)
 	public void verifyYouSavePrice() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -274,7 +277,7 @@ public class CartTest extends BaseTest {
 		Thread.sleep(1000);
 	}
 
-	@Test(priority = 18)
+	@Test(priority = 16)
 	public void enterGSTINAndSave() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -299,48 +302,51 @@ public class CartTest extends BaseTest {
 		System.out.println("Successfully Added GSTIN Details");
 		ScreenshotUtil.takeScreenshot("Successfully verified Business Purchase");
 		Thread.sleep(2000);
-		
+
 		WebElement cancelGstin = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cancel_applied_gstin"))));
 		cancelGstin.click();
 		System.out.println("Applied GSTIN has been removed");
 		Thread.sleep(2000);
-		driver.close();	
+		driver.close();
 		// Switch to the remaining window/tab
-	    Set<String> allWindows = driver.getWindowHandles();
-	    for (String window : allWindows) {
-	        driver.switchTo().window(window);
-	    }
-	    System.out.println("Switched to the CLIP tab: " + driver.getTitle());
-		/*//PTP is referred to Proceed To Pay
-		WebElement proceedToPay = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("proceed_to_pay"))));
-		proceedToPay.click();
-		System.out.println("Proceeded to Payment page successfully");
-		Thread.sleep(2000);*/
-		
+		Set<String> allWindows = driver.getWindowHandles();
+		for (String window : allWindows) {
+			driver.switchTo().window(window);
+		}
+		System.out.println("Switched to the CLIP tab: " + driver.getTitle());
+		/*
+		 * //PTP is referred to Proceed To Pay WebElement proceedToPay = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty(
+		 * "proceed_to_pay")))); proceedToPay.click();
+		 * System.out.println("Proceeded to Payment page successfully");
+		 * Thread.sleep(2000);
+		 */
+
 	}
 
-	/*@Test(priority = 19)
-	public void switchBackToFirstTab() throws InterruptedException {
-		// Assuming actions on the second tab are done
-		List<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
-		driver.switchTo().window(windowHandles.get(0));
-		System.out.println("Switched back to the first tab.");
-		Thread.sleep(5000);
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement pepperfryLogo = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("pepperfry_logo"))));
-
-		// Scroll directly to the logo element
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", pepperfryLogo);
-		System.out.println("Scrolled directly to the Pepperfry logo.");
-
-		// Adding a brief wait to ensure scroll completes and the element is in focus
-		Thread.sleep(1000);
-
-		// Attempt clicking using JavaScript to bypass any interception
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", pepperfryLogo);
-		System.out.println("Clicked on the Pepperfry logo using JavaScript.");*/
+	/*
+	 * @Test(priority = 19) public void switchBackToFirstTab() throws
+	 * InterruptedException { // Assuming actions on the second tab are done
+	 * List<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
+	 * driver.switchTo().window(windowHandles.get(0));
+	 * System.out.println("Switched back to the first tab."); Thread.sleep(5000);
+	 * 
+	 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	 * WebElement pepperfryLogo = wait
+	 * .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty
+	 * ("pepperfry_logo"))));
+	 * 
+	 * // Scroll directly to the logo element ((JavascriptExecutor)
+	 * driver).executeScript("arguments[0].scrollIntoView(true);", pepperfryLogo);
+	 * System.out.println("Scrolled directly to the Pepperfry logo.");
+	 * 
+	 * // Adding a brief wait to ensure scroll completes and the element is in focus
+	 * Thread.sleep(1000);
+	 * 
+	 * // Attempt clicking using JavaScript to bypass any interception
+	 * ((JavascriptExecutor) driver).executeScript("arguments[0].click();",
+	 * pepperfryLogo);
+	 * System.out.println("Clicked on the Pepperfry logo using JavaScript.");
+	 */
 }

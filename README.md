@@ -27,7 +27,7 @@ Navigate to the project directory:
 
 bash
 Copy code
-cd Ecommerce_Automation
+cd QaAutomation
 Install the required dependencies using Maven:
 
 bash

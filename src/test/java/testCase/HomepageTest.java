@@ -123,6 +123,7 @@ public class HomepageTest extends BaseTest {
 	/**
 	 * Scrolls the page to bring the specified element into view.
 	 *
+>>>>>>> e677b728a6047d06e60a43fccd3d2b306c06ab14
 	 * @param element The web element to scroll to.
 	 */
 	private void scrollToElement(WebElement element) {
@@ -134,4 +135,5 @@ public class HomepageTest extends BaseTest {
 			System.err.println("Error while scrolling to element: " + e.getMessage());
 		}
 	}
+
 }

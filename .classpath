@@ -113,5 +113,11 @@
 	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-safari-driver-4.27.0-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-support-4.27.0.jar"/>
 	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-support-4.27.0-sources.jar"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
