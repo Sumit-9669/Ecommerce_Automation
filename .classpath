@@ -6,12 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="optional" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="test" value="true"/>
@@ -26,15 +20,103 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/QA Automation/Jar files/selenium-server-4.24.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/auto-service-annotations-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/auto-service-annotations-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/byte-buddy-1.15.10.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/byte-buddy-1.15.10-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/checker-qual-3.43.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/checker-qual-3.43.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/commons-exec-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/commons-exec-1.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/error_prone_annotations-2.28.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/error_prone_annotations-2.28.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/failsafe-3.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/failsafe-3.3.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/failureaccess-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/failureaccess-1.0.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/guava-33.3.1-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/guava-33.3.1-jre-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/j2objc-annotations-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/j2objc-annotations-3.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/jspecify-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/jspecify-1.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/jsr305-3.0.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-api-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-api-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-api-incubator-1.44.1-alpha.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-api-incubator-1.44.1-alpha-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-context-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-context-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-exporter-logging-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-exporter-logging-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-common-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-common-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-extension-autoconfigure-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-extension-autoconfigure-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-extension-autoconfigure-spi-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-extension-autoconfigure-spi-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-logs-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-logs-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-metrics-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-metrics-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-trace-1.44.1.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-sdk-trace-1.44.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-semconv-1.25.0-alpha.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/opentelemetry-semconv-1.25.0-alpha-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-api-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-api-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-chrome-driver-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-chrome-driver-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-chromium-driver-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-chromium-driver-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v85-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v85-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v129-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v129-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v130-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v130-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v131-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-devtools-v131-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-edge-driver-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-edge-driver-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-firefox-driver-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-firefox-driver-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-http-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-http-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-ie-driver-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-ie-driver-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-java-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-java-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-json-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-json-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-manager-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-manager-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-os-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-os-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-remote-driver-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-remote-driver-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-safari-driver-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-safari-driver-4.27.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-support-4.27.0.jar"/>
+	<classpathentry kind="lib" path="C:/Selenium pepperfry/Selenium Jar file/selenium-support-4.27.0-sources.jar"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>

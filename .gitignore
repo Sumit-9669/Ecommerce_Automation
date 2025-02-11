@@ -1,3 +1,12 @@
 allure-results/
+<<<<<<< HEAD
 target/
 test-output/
+=======
+/target/
+/test-output/
+*.html
+*.xml
+*.lst
+*.js
+>>>>>>> e677b728a6047d06e60a43fccd3d2b306c06ab14

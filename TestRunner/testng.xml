@@ -9,10 +9,13 @@
 			<class name="testCase.LoginTest" />
 			<class name="testCase.HomepageTest" />
 			<class name="testCase.Brand_Clip" />
+			<class name="testCase.Search_Clip"/>
 			<class name="testCase.Normal_Clip" />
 			<class name="testCase.VipTest" />
 			<class name="testCase.CartTest" />
 			<class name="testCase.PaymentTest" />
+			<class name="testCase.Order_Confirmation"/>
+			<class name="testCase.MyOrders"/>
 		</classes>
 	</test>
 </suite>
