@@ -8,13 +8,12 @@
 		<classes>
 			<class name="testCase.LoginTest" />
 			<class name="testCase.HomepageTest" />
-			<class name="testCase.SearchTestProduct" />
+			<class name="testCase.Brand_Clip" />
+			<class name="testCase.Normal_Clip" />
 			<class name="testCase.VipTest" />
 			<class name="testCase.CartTest" />
 			<class name="testCase.PaymentTest" />
-			<class name="testCase.OrderConfirmationPage" />
 		</classes>
-	</test> <!--
-	Test -->
-</suite> <!--
-Suite -->
+	</test>
+</suite>
+

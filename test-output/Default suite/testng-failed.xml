@@ -3,27 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.SearchTestProduct">
+      <class name="testCase.CartTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="searchProductAfterLogin"/>
+          <include name="againSwitchFocusToPopup"/>
+          <include name="cancelWishListing"/>
+          <include name="clickOnWishlistCTA"/>
+          <include name="cancelPopUp"/>
+          <include name="verifyCartItems"/>
+          <include name="againClickOnWishlistCTA"/>
+          <include name="verifyCartProductName"/>
+          <include name="switchFocusToPopup"/>
         </methods>
-      </class> <!-- testCase.SearchTestProduct -->
-      <class name="testCase.LoginTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="automateLoginSignup"/>
-        </methods>
-      </class> <!-- testCase.LoginTest -->
-      <class name="testCase.HomepageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testClickingHomepageSections"/>
-        </methods>
-      </class> <!-- testCase.HomepageTest -->
+      </class> <!-- testCase.CartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,60 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Smoke Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-  </listeners>
-  <test thread-count="5" name="Smoke Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.OrderConfirmationPage">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyOrderPlacement"/>
-        </methods>
-      </class> <!-- testCase.OrderConfirmationPage -->
-      <class name="testCase.HomepageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testClickingHomepageSections"/>
-        </methods>
-      </class> <!-- testCase.HomepageTest -->
-      <class name="testCase.LoginTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="automateLoginSignup"/>
-        </methods>
-      </class> <!-- testCase.LoginTest -->
-      <class name="testCase.SearchTestProduct">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="searchProductAfterLogin"/>
-        </methods>
-      </class> <!-- testCase.SearchTestProduct -->
       <class name="testCase.CartTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="qtyDropDown"/>
+          <include name="againSwitchFocusToPopup"/>
+          <include name="cancelWishListing"/>
+          <include name="clickOnWishlistCTA"/>
+          <include name="cancelPopUp"/>
+          <include name="verifyCartItems"/>
+          <include name="againClickOnWishlistCTA"/>
+          <include name="verifyCartProductName"/>
+          <include name="switchFocusToPopup"/>
         </methods>
       </class> <!-- testCase.CartTest -->
-      <class name="testCase.PaymentTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="paymentOptions"/>
-        </methods>
-      </class> <!-- testCase.PaymentTest -->
-      <class name="testCase.VipTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="addToCartAndGoToCart"/>
-        </methods>
-      </class> <!-- testCase.VipTest -->
     </classes>
-  </test> <!-- Smoke Test(failed) -->
-</suite> <!-- Failed suite [Smoke Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
