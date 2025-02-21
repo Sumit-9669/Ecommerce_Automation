@@ -19,6 +19,26 @@ public class LoginTest extends BaseTest {
     @Test(priority = 1)
     public void InvalidLoginSignup() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Thread.sleep(7000); 
+        
+        try {
+			// Wait for the iframe to be present
+			WebElement iframe = driver.findElement(By.id("webklipper-publisher-widget-container-notification-frame"));
+			System.out.println(iframe);
+			if (iframe != null) {
+				// Switch to the iframe
+				driver.switchTo().frame(iframe);
+				// Wait for the close button to be clickable (using WebDriverWait)
+				WebElement closeButton = wait.until(
+						ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("popup_close_button"))));
+				closeButton.click();
+				// Switch back to the main content
+				driver.switchTo().defaultContent();
+			}
+		} catch (Exception e) {
+			System.out.println("Error: " + e.getMessage());
+			e.printStackTrace();
+		}
 
         // Perform the initial login page access only once
         WebElement signUpNow = wait.until(ExpectedConditions
