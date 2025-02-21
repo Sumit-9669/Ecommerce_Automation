@@ -18,7 +18,7 @@ public class HomepageTest extends BaseTest {
 	public void testClickingHomepageSections() throws InterruptedException {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		Thread.sleep(2000);
-		try {
+		/*try {
 			// Wait for the iframe to be present
 			WebElement iframe = driver.findElement(By.id("webklipper-publisher-widget-container-notification-frame"));
 			System.out.println(iframe);
@@ -35,7 +35,7 @@ public class HomepageTest extends BaseTest {
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
 			e.printStackTrace();
-		}
+		}*/
 		clickBannerAndNavigateBack(loc.getProperty("lhs_banner"), "LHS Banner");
 		// clickBannerAndNavigateBack(loc.getProperty("rhs_banner"), "RHS Banner");
 		clickBannerAndNavigateBack(loc.getProperty("woodsworth_banner"), "Woodsworth Banner");
