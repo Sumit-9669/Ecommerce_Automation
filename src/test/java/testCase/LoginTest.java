@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import base.BaseTest;
 import io.qameta.allure.Description;
 import utilities.EmailOTPReader;
@@ -16,130 +15,118 @@ import utilities.ScreenshotUtil;
 
 public class LoginTest extends BaseTest {
 
-    @Test(priority = 1)
-    public void InvalidLoginSignup() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        Thread.sleep(7000); 
-        
-        try {
-			// Wait for the iframe to be present
-			WebElement iframe = driver.findElement(By.id("webklipper-publisher-widget-container-notification-frame"));
-			System.out.println(iframe);
-			if (iframe != null) {
-				// Switch to the iframe
-				driver.switchTo().frame(iframe);
-				// Wait for the close button to be clickable (using WebDriverWait)
-				WebElement closeButton = wait.until(
-						ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("popup_close_button"))));
-				closeButton.click();
-				// Switch back to the main content
-				driver.switchTo().defaultContent();
+	@Test(priority = 1)
+	public void InvalidLoginSignup() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		waitForPageToLoad();
+		handlePopupIfPresent();
+
+		WebElement signUpNow = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("signup_icon"))));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(signUpNow).perform();
+
+		WebElement loginButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("login_button"))));
+		loginButton.click();
+
+		String[] invalidInputs = { "12345", "abcdefghij", "999999999999", "invalidemail@", "test@invaliddomain" };
+
+		for (String input : invalidInputs) {
+			try {
+				WebElement emailInput = wait
+						.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("email_field"))));
+				emailInput.clear();
+				emailInput.sendKeys(input);
+
+				WebElement continueButton = wait
+						.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("continue_button"))));
+				continueButton.click();
+
+				WebElement errorMessage = wait.until(
+						ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("error_message"))));
+				System.out.println("For input '" + input + "', error message: " + errorMessage.getText());
+
+				Assert.assertTrue(errorMessage.isDisplayed(), "Error message not displayed for input: " + input);
+				waitForShortInterval();
+
+			} catch (Exception e) {
+				System.out.println("Error encountered with input '" + input + "'.");
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			System.out.println("Error: " + e.getMessage());
-			e.printStackTrace();
+		}
+		ScreenshotUtil.takeScreenshot("Attempting to login with Invalid Credentials");
+	}
+
+	@Test(priority = 2)
+	@Description("To verify the Login functionality using valid Email")
+	public void automateLoginSignup() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		driver.navigate().refresh();
+
+		WebElement signUpNow = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("signup_icon"))));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(signUpNow).perform();
+
+		WebElement loginButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("login_button"))));
+		loginButton.click();
+
+		WebElement emailInput = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("email_field"))));
+		emailInput.sendKeys("sumit.p@pepperfry.com");
+
+		WebElement continueButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("continue_button"))));
+		continueButton.click();
+		waitForShortInterval();
+
+		String otp = EmailOTPReader.getOTPFromEmail("imap.gmail.com", "imaps", "sumit.p@pepperfry.com",
+				"ieqbqpmkwitkbrxc");
+		if (otp != null) {
+			WebElement otpInput = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("otp_input"))));
+			otpInput.sendKeys(otp);
+
+			WebElement submitOTPButton = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("submit_otp_button"))));
+			submitOTPButton.click();
+		} else {
+			System.out.println("Failed to fetch OTP");
 		}
 
-        // Perform the initial login page access only once
-        WebElement signUpNow = wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath(loc.getProperty("signup_icon")))); 
-        Actions actions = new Actions(driver);
-        actions.moveToElement(signUpNow).perform();
+		System.out.println("Login successful");
+		ScreenshotUtil.takeScreenshot("Successfully logged in with valid credentials");
+	}
 
-        WebElement loginButton = wait
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("login_button"))));
-        loginButton.click();
+	private void waitForPageToLoad() {
+		new WebDriverWait(driver, Duration.ofSeconds(15))
+				.until(webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+	}
 
-        // List of invalid inputs (mobile numbers and emails)
-        String[] invalidInputs = {
-            "12345",
-            "abcdefghij",
-            "999999999999",
-            "invalidemail@",
-            "test@invaliddomain"
-        };
+	private void handlePopupIfPresent() {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(
+					By.id("webklipper-publisher-widget-container-notification-frame")));
+			WebElement closeButton = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("popup_close_button"))));
+			closeButton.click();
+			driver.switchTo().defaultContent();
+			System.out.println("Popup closed.");
+		} catch (Exception e) {
+			System.out.println("No popup found or already closed.");
+		}
+	}
 
-        for (String input : invalidInputs) {
-            try {
-                // Enter invalid input (phone number or email)
-                WebElement emailInput = wait.until(ExpectedConditions
-                        .elementToBeClickable(By.xpath(loc.getProperty("email_field"))));
-                emailInput.clear();
-                emailInput.sendKeys(input);
-                
-                // Click on the "Continue" button
-                WebElement continueButton = wait.until(ExpectedConditions
-                        .elementToBeClickable(By.xpath(loc.getProperty("continue_button"))));
-                continueButton.click();
-
-                // Add wait to observe error message (you can replace the condition if specific error handling is needed)
-                WebElement errorMessage = wait.until(ExpectedConditions
-                        .visibilityOfElementLocated(By.xpath(loc.getProperty("error_message")))); 
-                System.out.println("For input '" + input + "', error message: " + errorMessage.getText());
-
-                // Add an assertion to ensure the error message appears
-                Assert.assertTrue(errorMessage.isDisplayed(), "Error message not displayed for input: " + input);
-
-            } catch (Exception e) {
-                System.out.println("Error encountered with input '" + input + "'.");
-                e.printStackTrace();
-            }
-
-            Thread.sleep(3000);  // Wait time between inputs for easier observation
-        }
-
-        // Ensure first test case passes successfully
-        Assert.assertTrue(true, "Invalid login/signup test case passed.");
-        ScreenshotUtil.takeScreenshot("Attempting to login with Invalid Credentials");
-    }
-
-    @Test(priority = 2)
-    @Description("To verify the Login functionality using valid Email")
-    public void automateLoginSignup() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        // Optionally, refresh the page or navigate back to ensure clean start
-        driver.navigate().refresh();
-
-        // Move to "Sign In/Up Now" element
-        WebElement signUpNow = wait
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("signup_icon"))));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(signUpNow).perform();
-
-        // Click on Login/SignUp
-        WebElement loginButton = wait
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("login_button")))); 
-        loginButton.click();
-
-        // Enter Email
-        WebElement emailInput = wait
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("email_field"))));
-        emailInput.sendKeys("sumit.p@pepperfry.com");
-
-        WebElement continueButton = wait
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("continue_button"))));
-        continueButton.click();
-        Thread.sleep(5000);
-
-        // Call the email reader function to get OTP from inbox
-        String otp = EmailOTPReader.getOTPFromEmail("imap.gmail.com", "imaps", "sumit.p@pepperfry.com",
-                "ieqbqpmkwitkbrxc");
-        //System.out.println("OTP fetched: " + otp);
-        if (otp != null) {
-            // Enter OTP into the field on the webpage
-            WebElement otpInput = driver.findElement(By.xpath(loc.getProperty("otp_input")));
-            otpInput.sendKeys(otp);
-
-            // Submit the OTP
-            WebElement submitOTPButton = driver.findElement(By.xpath(loc.getProperty("submit_otp_button")));
-            submitOTPButton.click();
-        } else {
-            System.out.println("Failed to fetch OTP");
-        }
-
-        System.out.println("Login successful");
-        ScreenshotUtil.takeScreenshot("Successfully logged in with valid credentials");
-
-    }
+	private void waitForShortInterval() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+	}
 }

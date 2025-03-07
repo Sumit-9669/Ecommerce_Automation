@@ -18,27 +18,21 @@ public class HomepageTest extends BaseTest {
 	public void testClickingHomepageSections() throws InterruptedException {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		Thread.sleep(2000);
-		/*try {
-			// Wait for the iframe to be present
-			WebElement iframe = driver.findElement(By.id("webklipper-publisher-widget-container-notification-frame"));
-			System.out.println(iframe);
-			if (iframe != null) {
-				// Switch to the iframe
-				driver.switchTo().frame(iframe);
-				// Wait for the close button to be clickable (using WebDriverWait)
-				WebElement closeButton = wait.until(
-						ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("popup_close_button"))));
-				closeButton.click();
-				// Switch back to the main content
-				driver.switchTo().defaultContent();
-			}
-		} catch (Exception e) {
-			System.out.println("Error: " + e.getMessage());
-			e.printStackTrace();
-		}*/
+		/*
+		 * try { // Wait for the iframe to be present WebElement iframe =
+		 * driver.findElement(By.id(
+		 * "webklipper-publisher-widget-container-notification-frame"));
+		 * System.out.println(iframe); if (iframe != null) { // Switch to the iframe
+		 * driver.switchTo().frame(iframe); // Wait for the close button to be clickable
+		 * (using WebDriverWait) WebElement closeButton = wait.until(
+		 * ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty(
+		 * "popup_close_button")))); closeButton.click(); // Switch back to the main
+		 * content driver.switchTo().defaultContent(); } } catch (Exception e) {
+		 * System.out.println("Error: " + e.getMessage()); e.printStackTrace(); }
+		 */
 		clickBannerAndNavigateBack(loc.getProperty("lhs_banner"), "LHS Banner");
 		// clickBannerAndNavigateBack(loc.getProperty("rhs_banner"), "RHS Banner");
-		clickBannerAndNavigateBack(loc.getProperty("woodsworth_banner"), "Woodsworth Banner");
+		//clickBannerAndNavigateBack(loc.getProperty("woodsworth_banner"), "Woodsworth Banner");
 		clickBannerAndNavigateBack(loc.getProperty("deals_banner"), "Deals Banner");
 		scrollAndClickMintwudAndPepperfryLogo(loc.getProperty("mintwud_banner"), loc.getProperty("pepperfry_logo"),
 				"Mintwud Banner", "Pepperfry Logo");
@@ -123,7 +117,8 @@ public class HomepageTest extends BaseTest {
 	/**
 	 * Scrolls the page to bring the specified element into view.
 	 *
->>>>>>> e677b728a6047d06e60a43fccd3d2b306c06ab14
+	 * >>>>>>> e677b728a6047d06e60a43fccd3d2b306c06ab14
+	 * 
 	 * @param element The web element to scroll to.
 	 */
 	private void scrollToElement(WebElement element) {
