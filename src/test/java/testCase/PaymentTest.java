@@ -32,6 +32,10 @@ public class PaymentTest extends BaseTest {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("search_result"))));
 		System.out.println("Searched the test product successfully");
 		Thread.sleep(2000);
+		js.executeScript("window.scrollBy({ top: 300, behavior: 'smooth' });");
+		Thread.sleep(1000);
+		js.executeScript("window.scrollTo({ top: 0, behavior: 'smooth' });");
+
 
 		try {
 			searchResult.click(); // Normal click
@@ -321,7 +325,7 @@ public class PaymentTest extends BaseTest {
 				break;
 			}
 		}
-		
+
 		WebElement buyNow = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("buy_now"))));
 		buyNow.click();
 		Thread.sleep(1000);

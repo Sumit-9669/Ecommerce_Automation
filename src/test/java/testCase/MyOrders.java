@@ -67,59 +67,59 @@ public class MyOrders extends BaseTest {
 
 	@Test(priority = 5)
 	public void verifyCancelOrder() throws InterruptedException {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-	    try {
-	        // Locate and click the "Cancel Order" button
-	        WebElement cancelOrder = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cancel_order"))));
-	        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", cancelOrder);
-	        System.out.println(cancelOrder.getText());
-	        cancelOrder.click();
-	        Thread.sleep(500);
+		try {
+			// Locate and click the "Cancel Order" button
+			WebElement cancelOrder = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cancel_order"))));
+			js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", cancelOrder);
+			System.out.println(cancelOrder.getText());
+			cancelOrder.click();
+			Thread.sleep(500);
 
-	        // Re-locate elements after DOM updates
-	        WebElement selectReasonbtn = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("select_reason_btn"))));
-	        selectReasonbtn.click();
-	        Thread.sleep(500);
+			// Re-locate elements after DOM updates
+			WebElement selectReasonbtn = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("select_reason_btn"))));
+			selectReasonbtn.click();
+			Thread.sleep(500);
 
-	        WebElement cancelReasonChangeProduct = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cnl_reason_chgn_product"))));
-	        cancelReasonChangeProduct.click();
+			WebElement cancelReasonChangeProduct = wait.until(
+					ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cnl_reason_chgn_product"))));
+			cancelReasonChangeProduct.click();
 
-	        // Re-locate elements after DOM updates
-	        WebElement confirmCancellation = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("confirm_cancellation"))));
-	        System.out.println(confirmCancellation.getText());
-	        confirmCancellation.click();
-	        Thread.sleep(500);
+			// Re-locate elements after DOM updates
+			WebElement confirmCancellation = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("confirm_cancellation"))));
+			System.out.println(confirmCancellation.getText());
+			confirmCancellation.click();
+			Thread.sleep(500);
 
-	        WebElement optionToRefund = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("refund_options"))));
-	        System.out.println(optionToRefund.getText());
+			WebElement optionToRefund = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("refund_options"))));
+			System.out.println(optionToRefund.getText());
 
-	        WebElement pfWallet = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("pfWallet"))));
-	        System.out.println(pfWallet.getText());
-	        pfWallet.click();
+			WebElement pfWallet = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("pfWallet"))));
+			System.out.println(pfWallet.getText());
+			pfWallet.click();
 
-	        // Re-locate elements after DOM updates
-	        WebElement proceedToCancelOrderBtn = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("proceedTo_cancel"))));
-	        System.out.println(proceedToCancelOrderBtn.getText());
-	        proceedToCancelOrderBtn.click();
+			// Re-locate elements after DOM updates
+			WebElement proceedToCancelOrderBtn = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("proceedTo_cancel"))));
+			System.out.println(proceedToCancelOrderBtn.getText());
+			proceedToCancelOrderBtn.click();
 
-	        WebElement cancelConfirmInfoMsg = wait
-	                .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cancel_confirm_info_msg"))));
-	        cancelConfirmInfoMsg.click();
+			WebElement cancelConfirmInfoMsg = wait.until(
+					ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cancel_confirm_info_msg"))));
+			cancelConfirmInfoMsg.click();
 
-	    } catch (StaleElementReferenceException e) {
-	        System.out.println("Caught StaleElementReferenceException: Re-locating elements.");
-	    } catch (Exception e) {
-	        System.out.println("Exception in verifyCancelOrder: " + e.getMessage());
-	    }
+		} catch (StaleElementReferenceException e) {
+			System.out.println("Caught StaleElementReferenceException: Re-locating elements.");
+		} catch (Exception e) {
+			System.out.println("Exception in verifyCancelOrder: " + e.getMessage());
+		}
 	}
 
 }

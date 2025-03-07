@@ -9,6 +9,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import base.BaseTest;
 import io.qameta.allure.Description;
@@ -18,15 +19,18 @@ public class CartTest extends BaseTest {
 
 	@Test(priority = 1)
 	@Description("Verifying Cart Items")
-	public void verifyCartItems() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
-		WebElement cartItems = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cart_items"))));
-		String itemsInCart = cartItems.getText();
-		System.out.println("In" + itemsInCart + "is/are present");
-		ScreenshotUtil.takeScreenshot("Successfully verified Items in cart");
-		Thread.sleep(500);
-
+	public void verifyCartItems() {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			WebElement cartItems = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cart_items"))));
+			String itemsInCart = cartItems.getText();
+			System.out.println("In " + itemsInCart + " item(s) are present");
+			ScreenshotUtil.takeScreenshot("Successfully verified Items in cart");
+		} catch (Exception e) {
+			ScreenshotUtil.takeScreenshot("verifyCartItems_Failed");
+			Assert.fail("Test failed due to exception: " + e.getMessage());
+		}
 	}
 
 	@Test(priority = 2)
@@ -183,18 +187,22 @@ public class CartTest extends BaseTest {
 
 	}
 
-	/*@Test(priority = 14)
-	public void verifyCartSummaryFurnitureProtection() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		WebElement cartSummaryFP = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath(loc.getProperty("cart_summary_furniture_protection"))));
-		String cartSummaryFurProtection = cartSummaryFP.getText();
-		System.out.println("The Furniture Protection amount in cart summary is " + cartSummaryFurProtection);
-		ScreenshotUtil.takeScreenshot("Successfully verified Cart Summary-1");
-		Thread.sleep(500);
-
-	}*/
+	/*
+	 * @Test(priority = 14) public void verifyCartSummaryFurnitureProtection()
+	 * throws InterruptedException { WebDriverWait wait = new WebDriverWait(driver,
+	 * Duration.ofSeconds(10));
+	 * 
+	 * WebElement cartSummaryFP = wait.until(ExpectedConditions
+	 * .visibilityOfElementLocated(By.xpath(loc.getProperty(
+	 * "cart_summary_furniture_protection")))); String cartSummaryFurProtection =
+	 * cartSummaryFP.getText();
+	 * System.out.println("The Furniture Protection amount in cart summary is " +
+	 * cartSummaryFurProtection);
+	 * ScreenshotUtil.takeScreenshot("Successfully verified Cart Summary-1");
+	 * Thread.sleep(500);
+	 * 
+	 * }
+	 */
 
 	@Test(priority = 13)
 	public void verifySubTotalOnCart() throws InterruptedException {
