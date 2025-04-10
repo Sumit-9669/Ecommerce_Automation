@@ -36,7 +36,6 @@ public class PaymentTest extends BaseTest {
 		Thread.sleep(1000);
 		js.executeScript("window.scrollTo({ top: 0, behavior: 'smooth' });");
 
-
 		try {
 			searchResult.click(); // Normal click
 		} catch (org.openqa.selenium.ElementClickInterceptedException e) {

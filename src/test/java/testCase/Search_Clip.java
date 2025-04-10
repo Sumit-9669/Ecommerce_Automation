@@ -259,19 +259,19 @@ public class Search_Clip extends BaseTest {
 
 	@Test(priority = 8)
 	public void backToHomepage() {
-	    WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(15));
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(15));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-	    // Ensure the page is fully loaded
-	    wait.until(webDriver -> js.executeScript("return document.readyState").equals("complete"));
+		// Ensure the page is fully loaded
+		wait.until(webDriver -> js.executeScript("return document.readyState").equals("complete"));
 
-	    // Wait for the Pepperfry logo to be visible
-	    WebElement pepLogo = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("pepperfry_logo"))));
+		// Wait for the Pepperfry logo to be visible
+		WebElement pepLogo = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("pepperfry_logo"))));
 
-	    // Click using JavaScript to avoid interception
-	    js.executeScript("arguments[0].click();", pepLogo);
-	    System.out.println("Navigated to Homepage using JavaScript click");
+		// Click using JavaScript to avoid interception
+		js.executeScript("arguments[0].click();", pepLogo);
+		System.out.println("Navigated to Homepage using JavaScript click");
 	}
-
 
 }
