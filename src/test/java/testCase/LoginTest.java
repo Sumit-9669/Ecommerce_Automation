@@ -109,7 +109,7 @@ public class LoginTest extends BaseTest {
 
 	private void handlePopupIfPresent() {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(
 					By.id("webklipper-publisher-widget-container-notification-frame")));
 			WebElement closeButton = wait
