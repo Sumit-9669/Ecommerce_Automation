@@ -37,7 +37,7 @@ public class Brand_Clip extends BaseTest {
 		List<WebElement> brands = driver.findElements(By.xpath(loc.getProperty("brand_links")));
 		for (WebElement brand : brands) {
 			String brandName = brand.getText().replace(",", "").trim();
-			System.out.println("Brand found: " + brandName);
+			//System.out.println("Brand found: " + brandName);
 			Thread.sleep(1000);
 			// Check for specific brands
 			if (brandName.equals("Woodsworth") || brandName.equals("Amberville") || brandName.equals("Mintwud")
