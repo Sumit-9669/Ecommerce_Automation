@@ -19,6 +19,8 @@ public class VipTest extends BaseTest {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		Actions actions = new Actions(driver);
+		driver.navigate().refresh();
+		Thread.sleep(500);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		WebElement threeseatersofa = wait
@@ -120,8 +122,6 @@ public class VipTest extends BaseTest {
 		 * driver.switchTo().window(tabs.get(i)); driver.close(); }
 		 * driver.switchTo().window(tabs.get(0));
 		 */
-
-		Thread.sleep(3000);
 
 	}
 
