@@ -214,6 +214,7 @@ public class Normal_Clip extends BaseTest {
 		Thread.sleep(1000);
 	}
 	
+	
 	/*@Test
 	public void goToHome() throws InterruptedException {
 		

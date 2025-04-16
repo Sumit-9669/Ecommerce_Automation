@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,6 +21,16 @@ public class VipTest extends BaseTest {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		Actions actions = new Actions(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		// Safe page refresh with timeout handling and screenshot on failure
+		try {
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+			driver.navigate().refresh();
+		} catch (TimeoutException e) {
+			System.out.println("Timeout during page refresh. Attempting JS reload...");
+			ScreenshotUtil.takeScreenshot("Timeout during refresh - fallback to JS reload");
+			js.executeScript("location.reload()");
+		}
 
 		WebElement threeseatersofa = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("Furniture_Meta"))));
@@ -110,18 +121,6 @@ public class VipTest extends BaseTest {
 		buyNow.click();
 		System.out.println("Clicked on Buy Now CTA Successfully");
 		Thread.sleep(2000);
-		/*
-		 * driver.navigate().back(); Thread.sleep(1000);
-		 * System.out.println("Navigated back to VIP page from Cart page");
-		 * 
-		 * // Switch to the first tab and close all other tabs
-		 * driver.switchTo().window(tabs.get(0)); // Switch to the first tab for (int i
-		 * = 1; i < tabs.size(); i++) { // Close all other tabs
-		 * driver.switchTo().window(tabs.get(i)); driver.close(); }
-		 * driver.switchTo().window(tabs.get(0));
-		 */
-
-		Thread.sleep(3000);
 
 	}
 

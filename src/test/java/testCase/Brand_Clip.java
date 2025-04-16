@@ -172,7 +172,7 @@ public class Brand_Clip extends BaseTest {
 		driver.close();
 		driver.switchTo().window(windowHandles.get(0));
 		System.out.println("Switched back to the first tab.");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		js.executeScript("window.scrollTo(0, 0);");
 		Thread.sleep(2000);
 
