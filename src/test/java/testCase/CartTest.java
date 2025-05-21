@@ -36,43 +36,65 @@ public class CartTest extends BaseTest {
 
 	@Test(priority = 2)
 	@Description("Verifying Cart Product Name")
-	public void verifyCartProductName() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
-		WebElement cartProductName = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cart_product_name"))));
-		String cartSKUName = cartProductName.getText();
-		System.out.println("The Product Name Present on cart is " + cartSKUName);
-		Thread.sleep(500);
+	public void verifyCartProductName() {
+		try {
+			WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
+			WebElement cartProductName = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cart_product_name"))));
+			String cartSKUName = cartProductName.getText();
+			System.out.println("The Product Name Present on cart is " + cartSKUName);
+			ScreenshotUtil.takeScreenshot("Successfully verified Product Name in cart");
+		} catch (Exception e) {
+			ScreenshotUtil.takeScreenshot("verifyCartProductName_Failed");
+			Assert.fail("Test failed due to exception: " + e.getMessage());
+		}
 	}
 
 	@Test(priority = 3)
 	@Description("Verifying wishlist functionality")
 	public void clickOnWishlistCTA() {
-		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
-		WebElement wishlistCTA = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cart_item_wishlist"))));
-		wishlistCTA.click();
-		System.out.println("Clicked on Wishlist CTA");
+		try {
+			WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
+			WebElement wishlistCTA = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("cart_item_wishlist"))));
+			wishlistCTA.click();
+			System.out.println("Clicked on Wishlist CTA");
+			ScreenshotUtil.takeScreenshot("Successfully clicked Wishlist CTA");
+		} catch (Exception e) {
+			ScreenshotUtil.takeScreenshot("clickOnWishlistCTA_Failed");
+			Assert.fail("Test failed due to exception: " + e.getMessage());
+		}
 	}
 
 	@Test(priority = 4, dependsOnMethods = "clickOnWishlistCTA")
-	public void switchFocusToPopup() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
-		@SuppressWarnings("unused")
-		WebElement popUp = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("cart_popup"))));
-		driver.switchTo().activeElement(); // Switch focus to the pop-up
-		System.out.println("Focused switched to Pop-Up");
-		Thread.sleep(1000);
+	public void switchFocusToPopup() {
+		try {
+			WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("cart_popup"))));
+
+			driver.switchTo().activeElement(); // Switch focus to the pop-up
+			System.out.println("Focus switched to Pop-Up");
+			ScreenshotUtil.takeScreenshot("Successfully switched focus to Pop-Up");
+			Thread.sleep(1000); // Optional
+		} catch (Exception e) {
+			ScreenshotUtil.takeScreenshot("switchFocusToPopup_Failed");
+			Assert.fail("Test failed due to exception: " + e.getMessage());
+		}
 	}
 
 	@Test(priority = 5, dependsOnMethods = "switchFocusToPopup")
 	public void cancelPopUp() {
-		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
-		WebElement closePopUp = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("close_wishlist_popup"))));
-		closePopUp.click();
-		System.out.println("Closed the wishlist pop-up");
+		try {
+			WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(10));
+			WebElement closePopUp = wait.until(
+					ExpectedConditions.visibilityOfElementLocated(By.xpath(loc.getProperty("close_wishlist_popup"))));
+			closePopUp.click();
+			System.out.println("Closed the wishlist pop-up");
+			ScreenshotUtil.takeScreenshot("Successfully closed the wishlist pop-up");
+		} catch (Exception e) {
+			ScreenshotUtil.takeScreenshot("cancelPopUp_Failed");
+			Assert.fail("Test failed due to exception: " + e.getMessage());
+		}
 	}
 
 	@Test(priority = 6)
@@ -316,17 +338,17 @@ public class CartTest extends BaseTest {
 		cancelGstin.click();
 		System.out.println("Applied GSTIN has been removed");
 		Thread.sleep(2000);
-		 // Get all window handles
-	    Set<String> allWindows = driver.getWindowHandles();
-	    Iterator<String> iterator = allWindows.iterator();
+		// Get all window handles
+		Set<String> allWindows = driver.getWindowHandles();
+		Iterator<String> iterator = allWindows.iterator();
 
-	    // Store the first tab handle
-	    String firstTabHandle = iterator.next();
-	    driver.close();
+		// Store the first tab handle
+		String firstTabHandle = iterator.next();
+		driver.close();
 
-	    // Switch back to the first tab
-	    driver.switchTo().window(firstTabHandle);
-	    System.out.println("Switched back to the first tab: " + driver.getTitle());
+		// Switch back to the first tab
+		driver.switchTo().window(firstTabHandle);
+		System.out.println("Switched back to the first tab: " + driver.getTitle());
 	}
 
 }
