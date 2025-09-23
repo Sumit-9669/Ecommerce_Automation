@@ -107,18 +107,43 @@ public class LoginTest extends BaseTest {
 						.executeScript("return document.readyState").equals("complete"));
 	}
 
+	/*
+	 * private void handlePopupIfPresent() { try { WebDriverWait wait = new
+	 * WebDriverWait(driver, Duration.ofSeconds(10));
+	 * wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(
+	 * By.id("webklipper-publisher-widget-container-notification-frame")));
+	 * WebElement closeButton = wait
+	 * .until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty(
+	 * "popup_close_button")))); closeButton.click();
+	 * driver.switchTo().defaultContent(); System.out.println("Popup closed."); }
+	 * catch (Exception e) {
+	 * System.out.println("No popup found or already closed."); } }
+	 */
 	private void handlePopupIfPresent() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			// First try iframe notification popup
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(
 					By.id("webklipper-publisher-widget-container-notification-frame")));
 			WebElement closeButton = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("popup_close_button"))));
 			closeButton.click();
 			driver.switchTo().defaultContent();
-			System.out.println("Popup closed.");
+			System.out.println("Iframe popup closed.");
 		} catch (Exception e) {
-			System.out.println("No popup found or already closed.");
+			driver.switchTo().defaultContent(); // safety
+			System.out.println("No iframe popup found.");
+		}
+
+		try {
+			// Then try signup/login modal
+			WebElement signupModalCloseBtn = wait.until(
+					ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("signup_popup_close_button"))));
+			signupModalCloseBtn.click();
+			System.out.println("Signup modal closed.");
+		} catch (Exception e) {
+			System.out.println("No signup modal found.");
 		}
 	}
 
